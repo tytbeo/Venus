@@ -11,9 +11,7 @@ function collapseChat() {
   document.getElementById("chat-text").style.display = 'none';
 };
 
-
-$(document).ready(function() {
-  $('.owl-carousel').owlCarousel({
+ $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 5,
     dots: false,
@@ -51,6 +49,8 @@ $(document).ready(function() {
     }
   });
 
+$(document).ready(function() {
+ 
   $('#chat-input').on('keypress', function(e) {
     // e.preventDefault();
 
