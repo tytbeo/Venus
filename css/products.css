@@ -61,10 +61,11 @@ h1.text-center {
 
 /* test */
 .title {
-  position: relative;
   width: 100%;
 }
-
+.title>h1 {
+  position: relative;
+}
 span.decorative-icon-left {
   display: inline-block;
   width: 136px;
@@ -73,7 +74,7 @@ span.decorative-icon-left {
   top: 50%;
   left: 38%;
   margin-top: 0;
-  margin-left: -50%;
+  margin-left: -310px;
   vertical-align: 6px;
   transform: translate(100%, -50%);
   background: #6b2800;
@@ -98,7 +99,7 @@ span.decorative-icon-right {
   top: 50%;
   right: 38%;
   margin-top: 0;
-  margin-right: -17%;
+  margin-right: -40px;
   vertical-align: 6px;
   transform: translate(100%, -50%);
   background: #6b2800;
@@ -145,7 +146,7 @@ ul.collapse>li>a:hover {
   margin-left: 30px;
   margin-right: 0;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   span.decorative-icon-right, span.decorative-icon-left {
     display: none;
   }
