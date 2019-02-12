@@ -69,6 +69,7 @@
     -webkit-transition: transform 0.3s ease-in;
     -moz-transition: transform 0.3s ease-in;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 .img-responsive {
   -webkit-transition: transform  1.5s linear;
