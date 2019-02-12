@@ -1,0 +1,84 @@
+
+.gallery-title
+{
+    font-size: 36px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+    color: gray;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;
+    color: gray;
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 0;
+    border: none;
+    transition: 0.4s;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid gray;
+
+}
+.actives {
+  color: gray;
+  background-color: black;
+  padding: 12px;
+  outline: none!important;
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: black;
+
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+
+/* sometext */
+.sometext {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding: 2rem 25%;
+  height: auto;
+  background-color: #f9f9f9  ;
+  margin-bottom: 2rem;
+}
+/* effect */
+.gallery_product
+{
+    -webkit-transition: transform 0.3s ease-in;
+    -moz-transition: transform 0.3s ease-in;
+    overflow: hidden;
+}
+.img-responsive {
+  -webkit-transition: transform  1.5s linear;
+  -moz-transition: transform  1.5s linear;
+  border-radius: 10px;
+}
+.gallery_product:hover {
+  transform: scale(0.85);
+  border-radius: 10px;
+}
+.gallery_product:hover .img-responsive {
+  transform: scale(1.5);
+}

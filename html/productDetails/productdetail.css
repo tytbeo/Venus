@@ -1,0 +1,149 @@
+* {
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  margin-top: 2em;
+}
+
+#mainmenu {
+  margin: 0;
+}
+
+#mainmenu .btn-link {
+  font-weight: bold;
+  color: grey;
+  text-decoration: none;
+}
+
+#mainmenu .btn-link:hover {
+  color: #369;
+}
+
+#mainmenu .btn-link.active {
+  color: #369;
+}
+
+.submenu {
+  border-top: 2px solid #369;
+  display: none;
+}
+
+.submenu .btn-link, .submenu .btn-link a {
+  font-weight: bold;
+  color: grey;
+  text-decoration: none;
+}
+
+.submenu a .btn-link:hover {
+  color: #369;
+}
+
+.submenu a .btn-link.active {
+  color: #369;
+}
+
+.product-display {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#product-image, img {
+  max-width: 100%;
+}
+
+.product-data > .product-preview > .slider-for {
+  outline: 5px solid white;
+}
+
+.product-data .brand-logo {
+  height: 1em;
+}
+
+.product-data > .product-details {
+  text-align: justify;
+}
+
+.product-data > .product-details > p {
+  display: inline;
+}
+
+.product-data > .product-details > span {
+  display: inline;
+}
+
+.product-data > .product-details > #more {
+  display: none;
+}
+
+.product-details > button {
+  display: none;
+}
+
+.product-options h4 {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.product-options h4+span {
+  float: right;
+  cursor: pointer;
+}
+
+.product-options h4+span:hover {
+  color: #369;
+}
+
+.quantity {
+  border-radius: 0;
+  border: 1px solid black;
+  line-height: 2;
+  width: 80%;
+}
+
+.price sup {
+  font-size: 55%;
+}
+
+.addcart {
+  border-radius: 0;
+  max-height: 10%;
+  transition: all .3s;
+  transition-timing-function: cubic-bezier(0, .25, .25, 3);
+}
+
+@media(max-width: 768px) {
+  .header .row:first-child {
+    text-align: center;
+  }
+
+  .container {
+    margin: auto;
+  }
+
+  .addcart {
+    max-height: 100%;
+  }
+
+  .product-details > button {
+    display: inline;
+  }
+}
+
+.zoom-btn {
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  border: solid 2px #999;
+  padding: .375em;
+  border-radius: 100%;
+  line-height: 1em;
+  color: #999;
+  z-index: 5;
+}

@@ -1,0 +1,54 @@
+.about {
+  background-color: #FFFFFF;
+  padding: 1px 0;
+
+
+}
+.text {
+  width: 80%;
+  text-align: justify !important;
+  margin: auto;
+}
+.about1 {
+  background-color: #F2F1F0;
+  margin: 3rem;
+}
+.card{
+  background-color: #FFFFFF !important;
+}
+
+h1 {
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+p {
+  line-height: 2rem;
+  color: #000000;
+  word-spacing: 1px;
+  font-size: 19px;
+}
+.anh {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+.text .anh {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+.col-8 {
+  text-align: justify !important;
+}
+button.btn.btn-link {
+  color: black;
+  text-decoration: none;
+}
+.card {
+  background-color: #F2F1F0;
+}
+@media screen and (max-width:1200px) {
+  .text {
+    width: 80%;
+  }
+}

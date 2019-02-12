@@ -1,0 +1,104 @@
+
+  <!-- Main Container -->
+  <div class="respon">
+    <div class="container1">
+      <!-- Row div -->
+      <div id="rowinfo" class="row">
+        <!-- Left column for contact information -->
+        <div class="col-md-5 col-xs-12">
+          <div class="trai mt-5">
+            <h4 class="pb-5">Venus Handicrafts</h4>
+
+            <div class="contactinfo">
+
+              <div class="textadd">
+                <p>A: 8 Ton That Thuyet St.</p>
+                <p>Nam Tu Liem Dist., Hanoi 100000</p>
+                <p>T: +84916-888-991</p>
+                <p>E: info@venus.com</p>
+              </div>
+
+              <br>
+              <div class="textadd">
+                <p>OPENING HOURS</p>
+                <p>MON - FRI: 7am - 5pm</p>
+                <p>SATURDAY: 8am - 5pm</p>
+                <p>SUNDAY: 8am - 11pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Left column for contact information -->
+
+        <!-- Right column for form & newsletters -->
+        <div class="col-md-6 col-xs-12">
+          <div class="phai">
+            <!-- Form for information -->
+            <form action="form-submit.html" method="post" autocomplete="on">
+              <div class="row">
+                <div class="form-group col-sm-6">
+                  <label class="sr-only" for="name">Name</label>
+                  <input type="text" class="form-control effecttt" id="name" onblur="blankFormValidation('name')" required placeholder="Name">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label class="sr-only" for="email">Email address</label>
+                  <input type="email" class="form-control effecttt" id="email" onblur="emailValidation(this)" aria-describedby="emailHelp" required placeholder="Email">
+                </div>
+                <div class="form-group col-sm-12">
+                  <label class="sr-only" for="subject">Subject</label>
+                  <input type="text" class="form-control effecttt" id="subject" onblur="blankFormValidation('subject')" required placeholder="Subject">
+                </div>
+                <div class="form-group col-sm-12">
+                  <label class="sr-only" for="message">Message</label>
+                  <textarea class="form-control effecttt" id="message" onblur="blankFormValidation('message')" rows="7" required placeholder="Message"></textarea>
+                </div>
+                <button type="submit" id="send" name="button">SEND</button>
+              </div>
+            </form>
+            <!-- End of Form for information -->
+
+            <!-- Newsletters -->
+            <div class="newsletters">
+              <div id="subs" class="row">
+                <div class="form-group col-sm-12">
+                  <span>Get our Newsletters</span>
+                </div>
+                <div class="form-group col-sm-7">
+                  <label class="sr-only" for="emailSub">Email Address</label>
+                  <input type="email" class="form-control effecttt" id="emailSub" required placeholder="Email Address">
+                </div>
+                <div class="form-group col-sm-5">
+                  <button type="submit" onblur="emailSubValidation()" class="btn btn-dark btn-block mb-3" id="subButton" name="button">Subscribe Now</button>
+                </div>
+                <div id="invalidEmailSub" class="form-group col-sm-12">
+                  <span>Please fill in a valid email address</span>
+                </div>
+              </div>
+
+              <div id="successfulSub">
+                <p>Thanks for Subscribing!</p>
+                <p>We'll send news to your inbox.</p>
+              </div>
+            </div>
+            <!-- End of Newsletters -->
+
+
+          </div>
+        </div>
+        <!-- End of Right column for form & newsletters -->
+
+      </div>
+      <!-- End of Row div -->
+
+      <!-- Maps div -->
+      <div class="maps">
+        <div class="googlemaps">
+          <iframe src="https://static.parastorage.com/services/santa/1.5957.13/static/external/googleMap.html?language=en&lat=21.028909958784098&long=105.78235051690827&address=8%20Ton%20That%20Thuyet%20Street,%20My%20Dinh,%20Tu%20Liem,%20Ha%20Noi%2010000&addressInfo=Venus-Handicrafts&showZoom=true&showStreetView=true&showMapType=true"
+            width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <!-- End of maps div -->
+
+    </div>
+  </div>
+  <!-- End of respon container -->

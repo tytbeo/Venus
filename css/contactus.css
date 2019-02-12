@@ -1,0 +1,111 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* respon */
+@media screen and (max-width: 769px) {
+  .trai {
+    margin-left: 0.5rem;
+  }
+}
+
+.container1 {
+  margin-top: 10rem;
+  background-color: #FFFFFF;
+}
+
+.trai, .phai {
+  padding: 0rem 1.8rem;
+  width: 100%;
+}
+
+.trai {
+  margin-left: 3rem;
+}
+
+.phai {
+  margin-top: 7.9rem;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width : 761px) {
+  .phai {
+    margin-top: 3rem;
+    display: -webkit-flex;
+    /* Safari */
+    -webkit-flex-direction: row-reverse;
+    /* Safari 6.1+ */
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+
+#name, #email, #subject, #message {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  width: 100%;
+}
+
+#emailSub {
+  background-color: #F2F1F0;
+  border: none;
+  border-radius: 0;
+  padding: 7px;
+  min-width: 110%;
+  text-indent: 3px;
+}
+
+#invalidEmailSub {
+  display: none;
+  font-size: 0.9em;
+  color: red;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+#subButton {
+  border-radius: 0;
+}
+
+.phai .effecttt:hover {
+  background-color: #F2F1F0;
+  border: none;
+}
+
+#send {
+  border: none;
+  background-color: #FFFFFF;
+  margin: auto;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+#send:hover {
+  color: #A1885F;
+}
+
+.googlemaps {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.form-invalid {
+  background-color: #FFE7E9;
+  border: 1px solid #FF0D1F !important;
+}
+
+#successfulSub {
+  display: none;
+}
+
+#successfulSub p {
+  text-align: center;
+  line-height: 2em;
+  font-size: 1.1rem;
+}
