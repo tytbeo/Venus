@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/gallery.css">
   <link rel="stylesheet" href="css/contactus.css">
   <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <!-- bootstrap -->
@@ -22,19 +24,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
   <script src="js/app.js" charset="utf-8"></script>
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
+  <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
   <script src="js/main.js" charset="utf-8"></script>
   <script src="js/gallery.js" charset="utf-8"></script>
   <script src="js/formvalidation.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
   <title>Home</title>
 </head>
-
 <body ng-app='myApp'>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top main-nav pt-3">
@@ -69,7 +67,7 @@
     </nav>
   </header>
   <div ng-view>
-    
+
   </div>
   <div class="contact">
     <a href=""><i class="fab fa-facebook-square"></i></a>
@@ -142,32 +140,6 @@
       </div>
     </div>
   </footer>
-  <script src="OwlCarousel2-2.3.4/dist/jquery.min.js" type="text/javascript"></script>
-  <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 5,
-      dots: false,
-      nav: true,
-      navText: [
-        "<i class='fa fa-chevron-left'></i>",
-        "<i class='fa fa-chevron-right'></i>"
-      ],
-      autoplay: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 4
-        }
-      }
-    });
-  </script>
 </body>
 
 </html>

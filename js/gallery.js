@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".filter-button").click(function() {
+  $(".filter-button").on('click' ,function() {
     var value = $(this).attr('data-filter');
     $(".filter-button").removeClass("actives");
     $(this).addClass("actives");
