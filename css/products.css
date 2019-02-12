@@ -74,7 +74,7 @@ span.decorative-icon-left {
   top: 50%;
   left: 38%;
   margin-top: 0;
-  margin-left: -310px;
+  margin-left: -390px;
   vertical-align: 6px;
   transform: translate(100%, -50%);
   background: #6b2800;
@@ -99,7 +99,7 @@ span.decorative-icon-right {
   top: 50%;
   right: 38%;
   margin-top: 0;
-  margin-right: -40px;
+  margin-right: -120px;
   vertical-align: 6px;
   transform: translate(100%, -50%);
   background: #6b2800;
