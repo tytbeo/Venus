@@ -24,7 +24,7 @@ app.config(function($routeProvider) {
   });
 });
 
-app.controller('homeCtrl', function($scope){
+app.controller('homeCtrl',['$scope', function($scope){
   $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 5,
@@ -47,9 +47,8 @@ app.controller('homeCtrl', function($scope){
       }
     }
   });
-
-});
-app.controller('galleryCtrl', function($scope){
+}]);
+app.controller('galleryCtrl',['$scope', function($scope){
   $(".filter-button").on('click' ,function() {
     var value = $(this).attr('data-filter');
     $(".filter-button").removeClass("actives");
@@ -65,4 +64,4 @@ app.controller('galleryCtrl', function($scope){
 
     }
   });
-});
+} ]);
