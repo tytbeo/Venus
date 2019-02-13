@@ -1,73 +1,62 @@
-var app = angular.module('myApp',['ngRoute']);
+function expandChat() {
+  document.getElementById('minimize').style.display = 'block';
+  document.getElementById('maximize').style.display = 'none';
+  document.getElementById('chat-text').style.display = 'block';
+};
+function collapseChat() {
+  document.getElementById("minimize").style.display = 'none';
+  document.getElementById("maximize").style.display = 'block';
+  document.getElementById("chat-text").style.display = 'none';
+};
+$(document).ready(function() {
 
-app.config(function($routeProvider) {
-  $routeProvider
-  .when("/", {
-    templateUrl : "html/home.html",
-    controller : "homeCtrl"
-  })
-  .when("/gallery", {
-    templateUrl : "html/gallery.html",
-    controller : "galleryCtrl"
-  })
-  .when("/products", {
-    templateUrl : "html/products.html",
-    controller : "productsCtrl"
-  })
-  .when("/aboutus", {
-    templateUrl : "html/aboutus.html",
-    controller : "aboutusCtrl"
-  })
-  .when("/contactus", {
-    templateUrl : "html/contactus.html",
-    controller : "contactusCtrl"
+  $('#chat-input').on('keypress', function(e) {
+    // e.preventDefault();
+
+    if (e.which == 13) {
+      // get user input message
+      var message = $('#chat-input').val();
+
+      // get current Time
+      var now = new Date(Date.now());
+      var formattedTime = now.getHours() + ":" + now.getMinutes();
+
+      // Them user input text message vao .chat-history
+      $('.chat-history').append(
+        '<div class="chat-message clearfix">' +
+
+        '<img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Chad-Anderson-Photo2.jpg/220px-Chad-Anderson-Photo2.jpg" alt="" width="32" height="32">' +
+
+        '<div class="chat-message-content clearfix">' +
+
+        '<span class="chat-time">' + formattedTime + '</span>' +
+
+        '<h5>Adam Smith</h5>' +
+
+        '<p>' + message + '</p>' +
+
+        '</div>'
+      );
+
+      // Hien thi last user input text message
+      var $chat = $(".chat-history");
+      $chat.scrollTop($chat.height());
+
+      // Tra lai blank space cho input sau khi send message
+      $('#chat-input').val('');
+
+      //prevent the keystroke from continuing
+      return false;
+    };
   });
 });
 
-app.controller('homeCtrl',['$scope', function($scope){
-  $(document).ready(function() {
-
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 5,
-      dots: false,
-      nav: true,
-      navText: [
-        "<i class='fa fa-chevron-left'></i>",
-        "<i class='fa fa-chevron-right'></i>"
-      ],
-      autoplay: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 4
-        }
-      }
-    });
-  });
-}]);
-app.controller('galleryCtrl',['$scope', function($scope){
-  $(document).ready(function() {
-
-    $(".filter-button").on('click' ,function() {
-      var value = $(this).attr('data-filter');
-      $(".filter-button").removeClass("actives");
-      $(this).addClass("actives");
-      if (value == "all") {
-        //$('.filter').removeClass('hidden');
-        $('.filter').show('1000');
-      } else {
-        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-        $(".filter").not('.' + value).hide('slow');
-        $('.filter').filter('.' + value).show('slow');
-
-      }
-    });
-  });
-} ]);
+var scrollTop = 0;
+$(window).scroll(function() {
+      scrollTop = $(window).scrollTop()
+      if (scrollTop <= 100) {
+        $('.main-nav').addClass('trans');
+      } else if (scrollTop > 100){
+        $('.main-nav').removeClass('trans');
+      };
+    };
