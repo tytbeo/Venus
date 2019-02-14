@@ -22,7 +22,8 @@
   <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700" rel="stylesheet">
   <!-- script -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
   <script src="js/app.js" charset="utf-8"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -43,19 +44,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContentLG">
         <ul class="navbar-nav mr-auto  space">
           <li class="nav-item active">
-            <a class="nav-link" href="#/!">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" ui-sref='home'>Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!gallery">Gallery</a>
+            <a class="nav-link" ui-sref='gallery'>Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!products">Products</a>
+            <a class="nav-link" ui-sref='products'>Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!aboutus">about us</a>
+            <a class="nav-link" ui-sref='aboutus'>about us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!contactus">contact us</a>
+            <a class="nav-link" ui-sref='contactus'>contact us</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -65,7 +66,7 @@
       </div>
     </nav>
   </header>
-  <div ng-view>
+  <div ui-view>
 
   </div>
   <div class="contact">
@@ -127,10 +128,11 @@
     <div class="foot ">
       <p class="">©2019 by Venus-Handicrafts.</p>
       <span class="footer-menu ">
-        <a href="home.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="aboutus.html">about us</a>
-        <a href="contactus.html">contact us</a>
+        <a ui-sref='home'>Home</a>
+        <a ui-sref='gallery'>Gallery</a>
+        <a ui-sref='products'>products</a>
+        <a ui-sref='aboutus'>about us</a>
+        <a ui-sref='contactus'>contact us</a>
       </span>
       <div class="contact2">
         <a href=""><i class="fab fa-facebook-square"></i></a>
