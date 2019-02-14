@@ -1,24 +1,30 @@
-var app = angular.module('myApp',['ngRoute']);
+var app = angular.module('myApp',['ui.router']);
 
-app.config(function($routeProvider) {
-  $routeProvider
-  .when("/", {
+app.config(function($stateProvider,$urlRouterProvider) {
+  $urlRouterProvider.otherwise('/home')
+  $stateProvider
+  .state("home", {
+    url: '/home',
     templateUrl : "html/home.html",
     controller : "homeCtrl"
   })
-  .when("/gallery", {
+  .state("gallery", {
+    url: '/gallery',
     templateUrl : "html/gallery.html",
     controller : "galleryCtrl"
   })
-  .when("/products", {
+  .state("products", {
+    url: '/products',
     templateUrl : "html/products.html",
     controller : "productsCtrl"
   })
-  .when("/aboutus", {
+  .state("aboutus", {
+    url: '/aboutus',
     templateUrl : "html/aboutus.html",
     controller : "aboutusCtrl"
   })
-  .when("/contactus", {
+  .state("contactus", {
+    url: '/contactus',
     templateUrl : "html/contactus.html",
     controller : "contactusCtrl"
   });
