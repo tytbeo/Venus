@@ -51,12 +51,11 @@ $(document).ready(function() {
   });
 });
 
-// var scrollTop = 0;
-// $(window).scroll(function() {
-//       scrollTop = $(window).scrollTop()
-//       if (scrollTop <= 100) {
-//         $('.main-nav').addClass('trans');
-//       } else if (scrollTop > 100){
-//         $('.main-nav').removeClass('trans');
-//       };
-//     };
+$(window).scroll(function() {
+   if($(this).scrollTop() < 130)  /*height in pixels when the navbar becomes non opaque*/
+   {
+       $('.main-nav').addClass('trans');
+   } else {
+       $('main-nav').removeClass('trans');
+   }
+});

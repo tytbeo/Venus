@@ -17,9 +17,11 @@ img{
   margin: auto;
 }
 /* header , nav */
-
+.trans {
+  background-color: transparent !important;
+}
 .main-nav {
-  background-color: #F2F1F0 !important;
+  background-color: #F2F1F0;
   width: 100% ;
 }
 
