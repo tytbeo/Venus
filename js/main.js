@@ -9,6 +9,15 @@ function collapseChat() {
   document.getElementById("chat-text").style.display = 'none';
 };
 $(document).ready(function() {
+  $(window).scroll(function() {
+     if($(window).scrollTop() > 130)
+     {
+         $('.main-nav').addClass('trans');
+     } else {
+         $('main-nav').removeClass('trans');
+     }
+  });
+
 
   $('#chat-input').on('keypress', function(e) {
     // e.preventDefault();
@@ -49,13 +58,4 @@ $(document).ready(function() {
       return false;
     };
   });
-});
-
-$(window).scroll(function() {
-   if($(this).scrollTop() < 130)  /*height in pixels when the navbar becomes non opaque*/
-   {
-       $('.main-nav').addClass('trans');
-   } else {
-       $('main-nav').removeClass('trans');
-   }
 });

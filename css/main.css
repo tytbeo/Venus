@@ -15,24 +15,20 @@ img{
 .respon {
   width: 96%;
   margin: auto;
+  margin-top: 7rem!important;
 }
 /* header , nav */
 .trans {
-  background-color: transparent !important;
+  background-color: #F2F1F0;
 }
 .main-nav {
-  background-color: #F2F1F0;
+  background-color: transparent;
   width: 100% ;
 }
 
 a:hover {
   color: #A1885F;
 }
-
-header {
-  margin-bottom: 7rem;
-}
-
 /* footer */
 footer {
   height: 100px;
