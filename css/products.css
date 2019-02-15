@@ -116,7 +116,6 @@ span.decorative-icon-right {
   transform: rotate(-45deg);
 }
 .side {
-  margin-top: 155px
 }
 /* categories */
 ul {
@@ -128,6 +127,7 @@ ul {
   margin-right: 0;
 }
 .categories li a{
+  text-transform: capitalize;
   transition: 0.5s;
   display: block;
   padding: 10px;

@@ -18,6 +18,14 @@ app.config(function($stateProvider,$urlRouterProvider) {
     templateUrl : "html/products.html",
     controller : "productsCtrl"
   })
+    // .state("products.all", {
+    //   url: "/all",
+    //   templateUrl : "html/products.html"
+    // })
+    // .state("products.teaPot", {
+    //   url: "/teaPot",
+    //   templateUrl : "html/products.html"
+    // })
   .state("aboutus", {
     url: '/aboutus',
     templateUrl : "html/aboutus.html",
@@ -80,3 +88,27 @@ app.controller('galleryCtrl',['$scope', function($scope){
     });
   });
 } ]);
+app.controller('productsCtrl',['$scope', function($scope){
+  var product = [
+    {class:'teapot',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
+    {class:'teapot',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
+    {class:'teapot',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
+    {class:'teapot',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
+    {class:'vase',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
+    {class:'vase',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
+    {class:'vase',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
+    {class:'vase',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+  ]
+  $scope.products = product;
+  $scope.maxSize = 5;
+  $scope.CurrentPage = 1;
+}]);

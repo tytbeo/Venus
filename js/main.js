@@ -8,16 +8,16 @@ function collapseChat() {
   document.getElementById("maximize").style.display = 'block';
   document.getElementById("chat-text").style.display = 'none';
 };
-$(document).ready(function() {
-  $(window).scroll(function() {
-     if($(window).scrollTop() > 130)
-     {
-         $('.main-nav').addClass('trans');
-     } else {
-         $('main-nav').removeClass('trans');
-     }
-  });
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").classList.remove('transparent');
+  } else {
+    document.getElementById("navbar").classList.add('transparent');
+  }
+}
+$(document).ready(function() {
 
   $('#chat-input').on('keypress', function(e) {
     // e.preventDefault();

@@ -34,12 +34,13 @@
     <div class="row">
       <div class="col-lg-2 side col-sm-3 col-xs-12">
         <ul class="categories">
+          <li ng-click='filterText=""'><a href="">all</a></li>
           <li>
             <a href=".ceramicsubmenu" data-toggle='collapse' aria-expanded="false" class="dropdown-toggle">ceramic</a>
             <ul class="ceramicsubmenu" class="collapse">
-              <li><a href="">tea pots</a></li>
-              <li><a href="">vase</a></li>
-              <li><a href="">tea cups</a></li>
+              <li ng-click='filterText="teapot"'><a href="">tea pots</a></li>
+              <li ng-click='filterText="vase"'><a href="">vase</a></li>
+              <li ng-click='filterText="teacup"'><a href="">tea cups</a></li>
             </ul>
           </li>
           <li><a href="">glass</a></li>
@@ -52,84 +53,17 @@
         </ul>
       </div>
       <div class="Gallery col-lg-10 col-sm-9">
-        <div class="title">
-          <h1 class="text-center">
-            <span class="decorative-icon-left"></span>
-            tea pots
-            <span class="decorative-icon-right"></span>
-          </h1>
-        </div>
         <div class="row pics">
-          <div class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item">
+          <div ng-repeat='product in filterData = (products | filter : filterText ) | limitTo:12:12*(page-1)' class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item {{product.class}}">
             <a href="">
-              <img src="images/product/product1.jpg" alt="">
-              <div class="content">BLUE GLAZE TEAPOT SET  3</div>
-            </a>
-          </div>
-          <div class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item">
-            <a href="">
-              <img src="images/product/product2.jpg" alt="">
-              <div class="content">CERAMIC TEAPOT SET</div>
-            </a>
-          </div>
-          <div class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item">
-            <a href="">
-              <img src="images/product/product3.jpg" alt="">
-              <div class="content">CERAMIC PITCHER SET 1</div>
-            </a>
-          </div>
-          <div class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item">
-            <a href="">
-              <img src="images/product/product10.jpg" alt="">
-              <div class="content">CERAMIC PITCHER SET 3</div>
-            </a>
-          </div>
-          <div class="title col-12">
-            <h1 class="text-center">
-              <span class="decorative-icon-left"></span>
-              vases
-              <span class="decorative-icon-right"></span>
-            </h1>
-          </div>
-          <div class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item">
-            <a href="html/productdetails/vase00.html">
-              <img src="https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625" alt="">
-              <div class="content">CERAMIC VASE</div>
-            </a>
-          </div>
-          <div class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item">
-            <a href="">
-              <img src="images/product/product6.jpg" alt="">
-              <div class="content">BLUE GLAZE VASE</div>
-            </a>
-          </div>
-          <div class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item">
-            <a href="">
-              <img src="images/product/product7.jpg" alt="">
-              <div class="content">PINK & BLUE FLOWER VASE</div>
-            </a>
-          </div>
-          <div class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item">
-            <a href="">
-              <img src="images/product/product8.jpg" alt="">
-              <div class="content">CERAMIC FLOWER VASE</div>
-            </a>
-          </div>
-          <div class="title col-12">
-            <h1 class="text-center">
-              <span class="decorative-icon-left"></span>
-              tea cups
-              <span class="decorative-icon-right"></span>
-            </h1>
-          </div>
-
-          <div class="col-md-6 col-sm-12 col-xl-3 col-lg-4 gal-item">
-            <a href="">
-              <img src="images/product/product5.jpg" alt="">
-              <div class="content">BLUE GLAZE TEA CUP SET</div>
+              <img src="{{product.img}}" alt="">
+              <div class="content">{{product.name}}</div>
             </a>
           </div>
         </div>
+        <ul uib-pagination total-items="filterData.length" ng-model="CurrentPage"
+
+         max-size="maxSize" class="pagination-sm" rotate="false"></ul>
       </div>
     </div>
 

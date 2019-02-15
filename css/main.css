@@ -18,12 +18,16 @@ img{
   margin-top: 7rem!important;
 }
 /* header , nav */
-.trans {
-  background-color: #F2F1F0;
-}
 .main-nav {
-  background-color: transparent;
+  background-color: #c4c4c4;
   width: 100% ;
+}
+nav.navbar{
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+nav.navbar.transparent {
+  background-color:rgba(0,0,0,0);
 }
 
 a:hover {
