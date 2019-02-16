@@ -1,3 +1,4 @@
+
 body {
   background-color: #F2F1F0 !important;
   font-family: 'Proxima Nova', sans-serif !important;
@@ -16,6 +17,22 @@ img{
   width: 96%;
   margin: auto;
   margin-top: 7rem!important;
+}
+.pagination{
+  font-size: 1rem;
+  justify-content: center;
+}
+.pagination-prev , .pagination-next, .pagination-page{
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 1px;
+  border: 1px solid #e2e2e2;
+}
+.pagination-page.active a {
+  color: white!important;
+}
+.pagination-page.active{
+  background-color: #2d85be;
 }
 /* header , nav */
 .main-nav {

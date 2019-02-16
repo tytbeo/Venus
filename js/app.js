@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ui.router']);
+var app = angular.module('myApp',['ui.router','ui.bootstrap']);
 
 app.config(function($stateProvider,$urlRouterProvider) {
   $urlRouterProvider.otherwise('/home')
@@ -109,6 +109,6 @@ app.controller('productsCtrl',['$scope', function($scope){
     {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
   ]
   $scope.products = product;
-  $scope.maxSize = 5;
-  $scope.CurrentPage = 1;
+  $scope.page = 1;
+
 }]);
