@@ -138,11 +138,18 @@ ul {
   font-size: 20px;
   background-color: #FFFF;
 }
-ul.collapse>li>a{
+.none {
+  display: none;
+  transition: display 1s ease-in;
+}
+ul.submenu{
+
+}
+ul.submenu>li>a{
   margin-left: 20px;
   margin-right: 10px;
 }
-ul.collapse>li>a:hover {
+ul.submenu>li>a:hover {
   margin-left: 30px;
   margin-right: 0;
 }

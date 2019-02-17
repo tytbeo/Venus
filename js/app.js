@@ -18,14 +18,6 @@ app.config(function($stateProvider,$urlRouterProvider) {
     templateUrl : "html/products.html",
     controller : "productsCtrl"
   })
-    // .state("products.all", {
-    //   url: "/all",
-    //   templateUrl : "html/products.html"
-    // })
-    // .state("products.teaPot", {
-    //   url: "/teaPot",
-    //   templateUrl : "html/products.html"
-    // })
   .state("aboutus", {
     url: '/aboutus',
     templateUrl : "html/aboutus.html",
@@ -110,5 +102,10 @@ app.controller('productsCtrl',['$scope', function($scope){
   ]
   $scope.products = product;
   $scope.page = 1;
-
+  $('document').ready(function(){
+    $('.submenu').addClass('none');
+    $('.dropdown-toggle').on('click',function(){
+      $('.submenu').toggleClass('none');
+    });
+  });
 }]);
