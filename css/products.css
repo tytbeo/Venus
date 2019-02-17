@@ -141,6 +141,11 @@ ul {
 .none {
   display: none;
   transition: display 1s ease-in;
+  -webkit-transition: display 1s ease-in;
+}
+@keyframes fadeIn {
+  from {opacity: 0;height: 0}
+  to {opacity: 1;height: auto;}
 }
 ul.submenu{
 

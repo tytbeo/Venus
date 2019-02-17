@@ -33,9 +33,28 @@ app.config(function($stateProvider,$urlRouterProvider) {
 app.controller('mainCtrl',['$scope', function($scope){
 
 }]);
-app.controller('homeCtrl',['$scope', function($scope){
+app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
+  var product = [
+    {class:'teapot',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
+    {class:'teapot',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
+    {class:'teapot',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
+    {class:'teapot',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
+    {class:'vase',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
+    {class:'vase',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
+    {class:'vase',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
+    {class:'vase',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+  ]
+  $rootScope.products = product;
   $(document).ready(function() {
-
     $('.owl-carousel').owlCarousel({
       loop: true,
       margin: 5,
@@ -60,9 +79,8 @@ app.controller('homeCtrl',['$scope', function($scope){
     });
   });
 }]);
-app.controller('galleryCtrl',['$scope', function($scope){
+app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope){
   $(document).ready(function() {
-
     $(".filter-button").on('click' ,function() {
       var value = $(this).attr('data-filter');
       $(".filter-button").removeClass("actives");
@@ -80,27 +98,7 @@ app.controller('galleryCtrl',['$scope', function($scope){
     });
   });
 } ]);
-app.controller('productsCtrl',['$scope', function($scope){
-  var product = [
-    {class:'teapot',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
-    {class:'teapot',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
-    {class:'teapot',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
-    {class:'teapot',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {class:'vase',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
-    {class:'vase',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
-    {class:'vase',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
-    {class:'vase',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-  ]
-  $scope.products = product;
+app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope){
   $scope.page = 1;
   $('document').ready(function(){
     $('.submenu').addClass('none');
