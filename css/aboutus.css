@@ -24,6 +24,10 @@ p {
   word-spacing: 1px;
   font-size: 19px;
 }
+.getValue {
+  width: 100%;
+  text-align: left!important;
+}
 .anh {
   width: 90%;
   height: auto;

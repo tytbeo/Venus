@@ -34,26 +34,6 @@ app.controller('mainCtrl',['$scope', function($scope){
 
 }]);
 app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
-  var product = [
-    {class:'teapot',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
-    {class:'teapot',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
-    {class:'teapot',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
-    {class:'teapot',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {class:'vase',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
-    {class:'vase',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
-    {class:'vase',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
-    {class:'vase',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-  ]
-  $rootScope.products = product;
   $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
       loop: true,
@@ -80,6 +60,26 @@ app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
   });
 }]);
 app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope){
+  var product = [
+    {class:'teapot',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
+    {class:'teapot',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
+    {class:'teapot',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
+    {class:'teapot',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
+    {class:'vase',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
+    {class:'vase',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
+    {class:'vase',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
+    {class:'vase',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+  ]
+  $rootScope.products = product;
   $(document).ready(function() {
     $(".filter-button").on('click' ,function() {
       var value = $(this).attr('data-filter');
@@ -99,11 +99,40 @@ app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope)
   });
 } ]);
 app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope){
+  var product = [
+    {class:'teapot',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
+    {class:'teapot',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
+    {class:'teapot',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
+    {class:'teapot',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
+    {class:'vase',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
+    {class:'vase',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
+    {class:'vase',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
+    {class:'vase',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+  ]
+  $rootScope.products = product;
   $scope.page = 1;
   $('document').ready(function(){
     $('.submenu').addClass('none');
     $('.dropdown-toggle').on('click',function(){
       $('.submenu').toggleClass('none');
+    });
+  });
+}]);
+app.controller('aboutusCtrl',['$scope', function($scope){
+  $(document).ready(function() {
+    $(".getValue").on('click' ,function() {
+      var valueS = $(this).attr('data-toggle');
+      $('.collapse').not("#" + valueS).removeClass('show',1000);
+      $('.collapse').filter("#" + valueS).addClass('show',1000);
     });
   });
 }]);

@@ -34,6 +34,14 @@ img{
 .pagination-page.active{
   background-color: #2d85be;
 }
+/* end pagination */
+
+/* toggleClass */
+
+.none {
+  display: none;
+}
+
 /* header , nav */
 .main-nav {
   background-color: #c4c4c4;

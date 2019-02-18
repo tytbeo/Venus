@@ -18,6 +18,10 @@ function scrollFunction() {
   }
 }
 $(document).ready(function() {
+  $('.navbar-collapse').addClass('collapse');
+  $('.navbar-toggler').on('click',function(){
+    $('.navbar-collapse').toggleClass('collapse');
+  });
 
   $('#chat-input').on('keypress', function(e) {
     // e.preventDefault();
