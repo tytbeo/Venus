@@ -17,7 +17,7 @@
 
 .pics a {
   display: block;
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .content {
@@ -50,9 +50,9 @@ h1.text-center {
   line-height: 400px;
   font-size: 20px;
   color: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .gal-item a:hover:after {

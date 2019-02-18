@@ -1,21 +1,23 @@
 
 .banner{
   margin-bottom: 50px;
+  height: 100%;
+  position: relative;
 }
-.img-about{
-  width:100%;
-  height: auto;
-}
-#asd{
-  background: grey;
-  padding: 15px;
+.layer {
+  position: absolute;
+  top : 20%;
+  left: 30%
 }
 .infomation-aboutus{
-  min-height: 562px;
-  position: relative;
+  padding: 20px 0;
+  background: grey;
+  outline: 20px solid grey;
   border: 2px solid #ffffff;
 }
-
+.mt-3 .row {
+  margin: 0 30px;
+}
 .infomation-aboutus .h3{
   padding: 10px;
   text-align: center;
@@ -25,24 +27,27 @@
 }
 .infomation-aboutus .details{
   padding: 20px;
-  text-align: justify;
-  font-size: 14px;
 }
+.infomation-aboutus .details p {
+  text-align: center;
+  font-size: 20px;
+}
+
 .owl-theme .owl-nav {
     position: relative;
-    bottom: 240px;
+    bottom: 60%;
     color: #9f3b00;
     font-size: 30px !important
 }
 
 .owl-prev {
     position: absolute;
-    left: -50px;
+    left: -30px;
 }
 
 .owl-next {
     position: absolute;
-    right: -50px;
+    right: -30px;
 }
 @media screen and (max-width: 768px;){
   .wrapper .img-about{

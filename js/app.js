@@ -49,11 +49,17 @@ app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
         0: {
           items: 1
         },
-        600: {
-          items: 1
+        400: {
+          items: 2
         },
-        1000: {
+        767: {
+          items: 3
+        },
+        1023: {
           items: 4
+        },
+        1300: {
+          items: 5
         }
       }
     });
@@ -61,20 +67,17 @@ app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
 }]);
 app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope){
   var product = [
-    {class:'teapot',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
-    {class:'teapot',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
-    {class:'teapot',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
-    {class:'teapot',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {class:'vase',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
-    {class:'vase',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
-    {class:'vase',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
-    {class:'vase',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
+    {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
+    {class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
+    {class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
+    {class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
+    {class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
+    {class:'vase ceramic',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
+    {class:'vase ceramic',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
+    {class:'teacup ceramic',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup ceramic',name:'black cup',img:'images/product/coc2.jpg'},
+    {class:'vase ceramic',name:'flower vase ',img:'images/product/vase.jpg'},
     {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
     {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
     {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
