@@ -11,7 +11,7 @@
   text-align: center;
   top : 15%;
   text-transform: capitalize;
-  left: 30%;
+  left: 35%;
   height: auto;
 }
 .qoute {
@@ -92,19 +92,9 @@ a.findMore {
   to {margin-left: 0;opacity: 1}
 }
 /* end animation */
-.img-about{
-  width:100%;
-  height: auto;
-}
-#asd{
-  padding: 15px;
-  height: 100%
-}
 .infomation-aboutus{
   background-color: grey;
   outline: grey solid 20px;
-  min-height: 565px;
-  position: relative;
   border: 2px solid #ffffff;
 }
 
@@ -122,19 +112,22 @@ a.findMore {
 }
 .owl-theme .owl-nav {
     position: relative;
-    bottom: 240px;
+    bottom: 60%;
     color: #9f3b00;
     font-size: 30px !important
 }
 
 .owl-prev {
     position: absolute;
-    left: -50px;
+    left: -30px;
 }
 
 .owl-next {
     position: absolute;
-    right: -50px;
+    right: -30px;
+}
+.mt-3 .row {
+  margin: 0 30px;
 }
 @media screen and (max-width: 768px;){
   .wrapper .img-about{
