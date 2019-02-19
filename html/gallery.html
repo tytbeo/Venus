@@ -5,14 +5,11 @@
       <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a
         little more about you.</p>
 
-    </div>
+    </div> 
     <div class="row">
       <div align="center" class='col-12'>
         <button class="filter-button actives" data-filter="all">All</button>
-        <button class="filter-button" data-filter="teapot">tea pot</button>
-        <button class="filter-button" data-filter="vase">vase</button>
-        <button class="filter-button" data-filter="teacup">tea cup</button>
-        <button class="filter-button" data-filter="irrigation">decorative object</button>
+        <button class="filter-button" ng-repeat='tag in tags' data-filter="{{tag.tagName}}">{{tag.tagName}}</button>
       </div>
       <br />
       <div ng-repeat='product in products' class="gallery_product col-xl-3 col-md-4  col-sm-6 filter {{product.class}}">

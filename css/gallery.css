@@ -1,5 +1,5 @@
-.gal-item img {
-  height: 380px;
+.gal-item img, .gallery_product {
+  height: 440px;
   overflow: hidden;
 }
 .gallery-title
@@ -20,7 +20,7 @@
 }
 .filter-button
 {
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 10px;
     text-align: center;
     color: gray;
@@ -32,6 +32,7 @@
     padding: 10px;
     margin-right: 5px;
     border: 1px solid gray;
+    text-transform: capitalize;
 
 }
 .actives {
@@ -71,7 +72,6 @@
 {
     -webkit-transition: transform 0.5s ease-in;
     -moz-transition: transform 0.5s ease-in;
-    overflow: hidden;
     margin-bottom: 30px;
 }
 .img-responsive {

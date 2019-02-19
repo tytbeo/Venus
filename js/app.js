@@ -37,7 +37,6 @@ app.config(function($stateProvider,$urlRouterProvider) {
         },
     });
 });
-
 app.controller('mainCtrl',['$scope', function($scope){
 
 }]);
@@ -74,6 +73,8 @@ app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
   });
 }]);
 app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope){
+  var tag = [{tagName:'teapot'},{tagName:'ceramic'},{tagName:'vase'},{tagName:'teacup'},{tagName:'glass'},{tagName:'candle'},{tagName:'home-decor'},{tagName:'wood'},{tagName:'table-wares'},{tagName:'decorative-object'}]
+  $scope.tags = tag;
   var product = [
     {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
     {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
@@ -86,9 +87,25 @@ app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope)
     {class:'teacup ceramic',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
     {class:'teacup ceramic',name:'black cup',img:'images/product/coc2.jpg'},
     {class:'vase ceramic',name:'flower vase ',img:'images/product/vase.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'candle',name:'golden candle holder',img:'images/candle accessories/Candle1.jpg'},
+    {class:'candle',name:'Nelumbo nucifera candle holder',img:'images/candle accessories/Candle2.jpg'},
+    {class:'candle',name:'glass candle keeper',img:'images/candle accessories/Candle3.jpg'},
+    {class:'candle',name:'glass vase candle holder',img:'images/candle accessories/Candle4.jpg'},
+    {class:'candle',name:'grapple candle',img:'images/candle accessories/Candle5.jpg'},
+    {class:'candle',name:'lantern candle',img:'images/candle accessories/Candle6.jpg'},
+    {class:'glass home-decor',name:'Buoy glass grid vase',img:'images/GLASS/glass1,Buoy glass grid vase.jpg'},
+    {class:'glass',name:'Profile coupe cocktail glass',img:'images/GLASS/glass2, Profile coupe cocktail glass.jpg'},
+    {class:'glass',name:'5-minute turquoise hour glass',img:'images/GLASS/glass3, 5-minute turquoise hour glass.jpg'},
+    {class:'glass',name:'Surge black and white glass vase',img:'images/GLASS/glass4, Surge black and white glass vase.jpg'},
+    {class:'glass',name:'Mars glass pitcher',img:'images/GLASS/glass5,Mars glass pitcher.jpg'},
+    {class:'home-decor',name:'lovely fur pillow',img:'images/Home Decor/16 loves you faux fur pillow with down-alternative insert.jpg'},
+    {class:'home-decor',name:'Loves neon red',img:'images/Home Decor/Loves neon red.jpg'},
+    {class:'home-decor',name:'Nassa basket pendant light',img:'images/Home Decor/Nassa basket pendant light.jpg'},
+    {class:'home-decor',name:'golden barrel cactus',img:'images/Home Decor/Potted 6 faux golden barrel cactus.jpg'},
+    {class:'Tables-wares',name:'Custome Wedding Table',img:'images/Tables wares/Custome Wedding Table.jpg'},
+    {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
+    {class:'Tables-wares',name:'stunning vintage plate',img:'images/Tables wares/stunning vintage French Limoges porcelain decorative collectable plate.jpg'},
+
   ]
   $rootScope.products = product;
   $(document).ready(function() {
@@ -111,23 +128,36 @@ app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope)
 } ]);
 app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope){
   var product = [
-    {class:'teapot',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
-    {class:'teapot',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
-    {class:'teapot',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
-    {class:'teapot',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {class:'vase',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
-    {class:'vase',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
-    {class:'vase',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
-    {class:'vase',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
+    {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
+    {class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
+    {class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
+    {class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
+    {class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
+    {class:'vase ceramic',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
+    {class:'vase ceramic',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
+    {class:'teacup ceramic',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
+    {class:'teacup ceramic',name:'black cup',img:'images/product/coc2.jpg'},
+    {class:'vase ceramic',name:'flower vase ',img:'images/product/vase.jpg'},
+    {class:'candle',name:'golden candle holder',img:'images/candle accessories/Candle1.jpg'},
+    {class:'candle',name:'Nelumbo nucifera candle holder',img:'images/candle accessories/Candle2.jpg'},
+    {class:'candle',name:'glass candle keeper',img:'images/candle accessories/Candle3.jpg'},
+    {class:'candle',name:'glass vase candle holder',img:'images/candle accessories/Candle4.jpg'},
+    {class:'candle',name:'grapple candle',img:'images/candle accessories/Candle5.jpg'},
+    {class:'candle',name:'lantern candle',img:'images/candle accessories/Candle6.jpg'},
+    {class:'glass home-decor',name:'Buoy glass grid vase',img:'images/GLASS/glass1,Buoy glass grid vase.jpg'},
+    {class:'glass',name:'Profile coupe cocktail glass',img:'images/GLASS/glass2, Profile coupe cocktail glass.jpg'},
+    {class:'glass',name:'5-minute turquoise hour glass',img:'images/GLASS/glass3, 5-minute turquoise hour glass.jpg'},
+    {class:'glass',name:'Surge black and white glass vase',img:'images/GLASS/glass4, Surge black and white glass vase.jpg'},
+    {class:'glass',name:'Mars glass pitcher',img:'images/GLASS/glass5,Mars glass pitcher.jpg'},
+    {class:'home-decor',name:'lovely fur pillow',img:'images/Home Decor/16 loves you faux fur pillow with down-alternative insert.jpg'},
+    {class:'home-decor',name:'Loves neon red',img:'images/Home Decor/Loves neon red.jpg'},
+    {class:'home-decor',name:'Nassa basket pendant light',img:'images/Home Decor/Nassa basket pendant light.jpg'},
+    {class:'home-decor',name:'golden barrel cactus',img:'images/Home Decor/Potted 6 faux golden barrel cactus.jpg'},
+    {class:'Tables-wares',name:'Custome Wedding Table',img:'images/Tables wares/Custome Wedding Table.jpg'},
+    {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
+    {class:'Tables-wares',name:'stunning vintage plate',img:'images/Tables wares/stunning vintage French Limoges porcelain decorative collectable plate.jpg'},
+
   ]
   $rootScope.products = product;
   $scope.page = 1;
