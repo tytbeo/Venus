@@ -1,7 +1,7 @@
 
 body {
   background-color: #F2F1F0 !important;
-  font-family: 'Proxima Nova', sans-serif !important;
+  font-family: 'Roboto Mono', monospace;
 }
 a {
   text-decoration: none !important;
@@ -19,7 +19,7 @@ img{
   margin-top: 7rem!important;
 }
 .pagination{
-  font-size: 1rem;
+  font-size: 1.3rem;
   justify-content: center;
 }
 .pagination-prev , .pagination-next, .pagination-page{
@@ -33,6 +33,12 @@ img{
 }
 .pagination-page.active{
   background-color: #2d85be;
+}
+ .pagination-page:hover {
+  background-color: #2d85be;
+ }
+.pagination-page:hover a {
+  color: white!important;
 }
 /* end pagination */
 

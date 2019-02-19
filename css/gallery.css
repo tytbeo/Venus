@@ -72,14 +72,14 @@
     margin-bottom: 30px;
 }
 .img-responsive {
-  -webkit-transition: transform  1s linear;
-  -moz-transition: transform  1s linear;
+  -webkit-transition: transform  0.7s linear;
+  -moz-transition: transform 0.7s linear;
   border-radius: 10px;
 }
 .gallery_product:hover {
-  transform: scale(0.85);
+  transform: scale(0.92);
   border-radius: 10px;
 }
 .gallery_product:hover .img-responsive {
-  transform: scale(1.25);
+  transform: scale(1.15);
 }

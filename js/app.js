@@ -27,7 +27,15 @@ app.config(function($stateProvider,$urlRouterProvider) {
     url: '/contactus',
     templateUrl : "html/contactus.html",
     controller : "contactusCtrl"
-  });
+  })
+  .state('details', {
+        url: "/details/:id",
+        templateUrl : 'html/details.html',
+        controller : "detailsCtrl",
+        params: {
+            id : null
+        },
+    });
 });
 
 app.controller('mainCtrl',['$scope', function($scope){
