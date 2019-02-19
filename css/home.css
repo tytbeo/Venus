@@ -1,23 +1,24 @@
 
+
 .banner{
   margin-bottom: 50px;
-  height: 100%;
-  position: relative;
 }
-.layer {
-  position: absolute;
-  top : 20%;
-  left: 30%
+.img-about{
+  width:100%;
+  height: auto;
+}
+#asd{
+  padding: 15px;
+  height: 100%
 }
 .infomation-aboutus{
-  padding: 20px 0;
-  background: grey;
-  outline: 20px solid grey;
+  background-color: grey;
+  outline: grey solid 20px;
+  min-height: 565px;
+  position: relative;
   border: 2px solid #ffffff;
 }
-.mt-3 .row {
-  margin: 0 30px;
-}
+
 .infomation-aboutus .h3{
   padding: 10px;
   text-align: center;
@@ -27,30 +28,86 @@
 }
 .infomation-aboutus .details{
   padding: 20px;
+  text-align: justify;
+  font-size: 17px;
 }
-.infomation-aboutus .details p {
-  text-align: center;
-  font-size: 20px;
-}
-
 .owl-theme .owl-nav {
     position: relative;
-    bottom: 60%;
+    bottom: 240px;
     color: #9f3b00;
     font-size: 30px !important
 }
 
 .owl-prev {
     position: absolute;
-    left: -30px;
+    left: -50px;
 }
 
 .owl-next {
     position: absolute;
-    right: -30px;
+    right: -50px;
 }
 @media screen and (max-width: 768px;){
   .wrapper .img-about{
     margin-bottom: 15px;
   }
+}
+.title{
+  position: relative;
+  width: 100%;
+}
+.title h1{
+  color: #c00404;
+  font-weight: bold;
+  font-size: 36px;
+}
+span.decorative-icon-left  {
+    display: inline-block;
+    width: 136px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    margin-top: 0;
+    margin-left: -310px;
+    vertical-align: 6px;
+    transform: translate(100%,-50%);
+    background: #6b2800;
+}
+.decorative-icon-left:after {
+    content: "";
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    right: -14px;
+    bottom: -5px;
+    border: 1px solid #6b2800;
+    transform: rotate(-45deg);
+}
+span.decorative-icon-right {
+    display: inline-block;
+    width: 132px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 38%;
+    margin-top: 0;
+    margin-right: -40px;
+    vertical-align: 6px;
+    transform: translate(100%,-50%);
+    background: #6b2800;
+}
+.decorative-icon-right:before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    left: -13px;
+    bottom: -5px;
+    border: 1px solid #6b2800;
+    transform: rotate(-45deg);
+}
+
+.item{
+  padding: 5px;
 }
