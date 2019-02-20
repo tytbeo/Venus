@@ -29,11 +29,11 @@ app.config(function($stateProvider,$urlRouterProvider) {
     controller : "contactusCtrl"
   })
   .state('details', {
-        url: "/details/:id",
+        url: "/details/:ProductId",
         templateUrl : 'html/details.html',
         controller : "detailsCtrl",
         params: {
-            id : null
+            ProductId : null
         },
     });
 });
@@ -176,4 +176,9 @@ app.controller('aboutusCtrl',['$scope', function($scope){
       $('.collapse').filter("#" + valueS).addClass('show',1000);
     });
   });
+}]);
+app.controller('detailsCtrl',['$scope', '$stateParams',function($scope, $stateParams){
+  $scope.productId = $stateParams.productId;
+
+  
 }]);
