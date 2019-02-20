@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ui.router','ui.bootstrap']);
+var app = angular.module('myApp',['ui.router','ui.bootstrap','ngAnimate', 'ngTouch', 'ngCookies', 'slick', 'ngMaterial', 'hm.readmore']);
 
 app.config(function($stateProvider,$urlRouterProvider) {
   $urlRouterProvider.otherwise('/home')
@@ -29,11 +29,11 @@ app.config(function($stateProvider,$urlRouterProvider) {
     controller : "contactusCtrl"
   })
   .state('details', {
-        url: "/details/:id",
+        url: "/details/:ProductId",
         templateUrl : 'html/details.html',
         controller : "detailsCtrl",
         params: {
-            id : null
+            ProductId : null
         },
     });
 });
@@ -107,7 +107,7 @@ app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope)
     {class:'Tables-wares',name:'stunning vintage plate',img:'images/Tables wares/stunning vintage French Limoges porcelain decorative collectable plate.jpg'},
 
   ]
-  $rootScope.products = product;
+  $scope.products = product;
   $(document).ready(function() {
     $(".filter-button").on('click' ,function() {
       var value = $(this).attr('data-filter');
@@ -128,12 +128,12 @@ app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope)
 } ]);
 app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope){
   var product = [
-    {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
-    {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
-    {class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
-    {class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
-    {class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
+    {id:'001',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
+    {id:'002',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
+    {id:'003',class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
+    {id:'004',class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
+    {id:'005',class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
+    {id:'006',class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
     {class:'vase ceramic',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
     {class:'vase ceramic',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
     {class:'teacup ceramic',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
@@ -159,7 +159,7 @@ app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope
     {class:'Tables-wares',name:'stunning vintage plate',img:'images/Tables wares/stunning vintage French Limoges porcelain decorative collectable plate.jpg'},
 
   ]
-  $rootScope.products = product;
+  $scope.products = product;
   $scope.page = 1;
   $('document').ready(function(){
     $('.submenu').addClass('none');
@@ -176,4 +176,237 @@ app.controller('aboutusCtrl',['$scope', function($scope){
       $('.collapse').filter("#" + valueS).addClass('show',1000);
     });
   });
+}]);
+app.controller('detailsCtrl',['$scope', '$stateParams','$cookies',function($scope, $stateParams,$cookies){
+  var product = [
+      {
+        id : '001' ,
+        imgsources: [
+          { image: 'images/ProductDetails/img00.jpeg' },
+          { image: 'images/ProductDetails/img01.jpeg' },
+          { image: 'images/ProductDetails/img02.jpeg' },
+          { image: 'images/ProductDetails/img03.jpeg' },
+          { image: 'images/ProductDetails/img04.jpeg' }
+        ],
+        name: 'Raw Marble Object',
+        sku: 'DO001',
+        description: 'Image 00',
+        summary: 'Rock Formation. Marble in its most natural state. Unpolished, unfinished and undeniably beautiful.',
+        moresummary: `Each piece will be completely unique in shape, color and texture. Raw Marble Object. 5 inches dia.
+          <ul>
+              <li>Marble</li>
+              <li>Each will be unique</li>
+              <li>Wipe with a soft cloth</li>
+              <li>Made in Vietnam</li>
+          </ul>`,
+        price: 39.95
+      },
+      {
+        id : '002' ,
+        imgsources: [
+          { image: 'images/ProductDetails/img10.jpeg' },
+          { image: 'images/ProductDetails/img11.jpeg' },
+          { image: 'images/ProductDetails/img12.jpeg' },
+          { image: 'images/ProductDetails/img13.jpeg' },
+          { image: 'images/ProductDetails/img14.jpeg' }
+        ],
+        name: 'Sur Reactive Vase',
+        sku: 'CV002',
+        description: 'Image 10',
+        summary: 'Dark Waters. Teardrop-shaped ceramic vase holds fresh greenery and stems in moody blue hues.',
+        moresummary: `Deep blue reactive glaze washes over top, finishing each piece unique.
+        <ul>
+            <li>Overall Dimensions: Height: 8.75" X Diameter: 6"</li>
+            <li>Ceramic with dark blue reactive glaze</li>
+            <li>Each will be unique</li>
+            <li>Wipe with a soft cloth</li>
+            <li>Made in Vietnam</li>
+        </ul>`,
+        price: 29.95
+      },
+      {
+        id : '003' ,
+        imgsources: [
+          { image: 'images/ProductDetails/img20.jpeg' },
+          { image: 'images/ProductDetails/img21.jpeg' },
+          { image: 'images/ProductDetails/img22.jpeg' },
+          { image: 'images/ProductDetails/img23.jpeg' },
+          { image: 'images/ProductDetails/img24.jpeg' }
+        ],
+        name: 'Fuel Navy Credenza',
+        sku: 'FS003',
+        description: 'Image 20',
+        summary: 'Blue Room. Clean lines in glossy navy lacquer span almost five feet to broaden storage options.',
+        moresummary: `Low-profile frame with expansive top can even pedestal a widescreen. Two clean-front doors hide two adjustable A/V-ready shelves (one on each side) with a gap and cutouts for cord management. Engineered wood case floats on slim steel L feet in brushed nickel-plated finish.
+        <ul>
+            <li>Low-emission engineered wood with hi-gloss navy finish</li>
+            <li>Steel L feet with a brushed nickel-plated finish</li>
+            <li>Top holds TV or stereo up to 50 lbs. evenly distributed</li>
+            <li>Shelves have built-in gaps for cords; back has cord cutouts</li>
+            <li>Clean with a soft, dry cloth</li>
+            <li>Made in Vietnam</li>
+        </ul>`,
+        price: 499
+      },
+      {
+        id : '004',
+        imgsources: [
+          { image: 'images/ProductDetails/img30.jpeg' },
+          { image: 'images/ProductDetails/img31.jpeg' },
+          { image: 'images/ProductDetails/img32.jpeg' },
+          { image: 'images/ProductDetails/img33.jpeg' },
+          { image: 'images/ProductDetails/img34.jpeg' }
+        ],
+        name: 'Rush Brushed Gold Flatware Set',
+        sku: 'TW004',
+        description: 'Image 30',
+        summary: 'Gold Diggers. Get a hold on gold at the table. Flatware is forged with substantial heft in 18/0 stainless steel (13/0 for the knife) with a gold-colored finish.',
+        moresummary: `Matte finish handles contrast gleaming polished heads. Five-piece settings dine a party of four.
+        <ul>
+            <li>18/0 forged stainless steel</li>
+            <li>Gold finish with matte handles</li>
+            <li>Hand wash</li>
+            <li>Hand drying is recommended to prevent discoloration and film build-up</li>
+            <li>Made in Vietnam</li>
+        </ul>`,
+        price: 89.95
+      },
+      {
+        id : '005',
+        imgsources: [
+          { image: 'images/ProductDetails/img40.jpeg' },
+          { image: 'images/ProductDetails/img41.jpeg' },
+          { image: 'images/ProductDetails/img42.jpeg' },
+          { image: 'images/ProductDetails/img43.jpeg' },
+          { image: 'images/ProductDetails/img44.jpeg' }
+        ],
+        name: 'Bondi Mosaic Wall Decor',
+        sku: 'HD005',
+        description: 'Image 40',
+        summary: 'Earth And Sky. Abstract landscape is crafted from strips of natural water hyacinth.',
+        moresummary: `Fibers are dyed an earthy spectrum of blue, black, gold and red then folded into triangular shapes and arranged into the conceptual mosaic you see here. We love the texture it adds to any space.
+        <ul>
+            <li>Water hyacinth and engineered wood</li>
+            <li>Each will be unique</li>
+            <li>Different wall materials may require different types of fasteners; use fasteners suitable for the walls in your home</li>
+            <li>Dust with soft, dry cloth</li>
+            <li>Made in Vietnam</li>
+        </ul>`,
+        price: 199
+      },
+      {
+        id : '006',
+        imgsources: [
+          { image: 'images/ProductDetails/img50.jpeg' },
+          { image: 'images/ProductDetails/img51.jpeg' },
+          { image: 'images/ProductDetails/img52.jpeg' },
+          { image: 'images/ProductDetails/img53.jpeg' },
+          { image: 'images/ProductDetails/img54.jpeg' }
+        ],
+        name: '4 Star Pillar Candle Holders',
+        sku: 'CH006',
+        description: 'Image 50',
+        summary: 'Point Made. Cast aluminum pillar candle holder makes strong sculptural statement in antique brass finish.',
+        moresummary: `Attention-grabbing from every angle.
+        <ul>
+            <li>Cast aluminum with antiqued brass finish</li>
+            <li>Each will be unique</li>
+            <li>Max pillar candle height: 6"</li>
+            <li>Clean with a soft cloth</li>
+            <li>Made in Vietnam</li>
+        </ul>`,
+        price: 44.95
+      },
+      {
+        id : '007',
+        imgsources: [
+          { image: 'images/ProductDetails/img60.jpeg' },
+          { image: 'images/ProductDetails/img61.jpeg' },
+          { image: 'images/ProductDetails/img62.jpeg' },
+          { image: 'images/ProductDetails/img63.jpeg' },
+          { image: 'images/ProductDetails/img64.jpeg' }
+        ],
+        name: 'Artemis Round Dining Table',
+        sku: 'WD007',
+        description: 'Image 60',
+        summary: 'Feast Al Fresco. Designer Jannis Ellenberger explores the beauty of a spare, simple form. Defined by planes and angles, the architectural profile is elevated by a the rich tones of 100% acacia wood with a natural oiled finish that will naturally patina and lighten over time.',
+        moresummary: `Unique angled legs support a slatted surface with built-in umbrella hole and room to seat 4. Makes the perfect dining companion with the Artemis Dining Chairs and Bench.
+        <ul>
+            <li>Acacia wood with galvanized steel hardware</li>
+            <li>Wood will naturally patina and age with time</li>
+            <li>Outdoor-safe; cover or store indoors during inclement weather and when not in use</li>
+            <li>Clean with a soft damp cloth; no abrasive cleaners</li>
+            <li>Made in Vietnam</li>
+        </ul>`,
+        price: 399
+      },
+      {
+        id : '008',
+        imgsources: [
+          { image: 'images/ProductDetails/img70.jpeg' },
+          { image: 'images/ProductDetails/img71.jpeg' },
+          { image: 'images/ProductDetails/img72.jpeg' },
+          { image: 'images/ProductDetails/img73.jpeg' },
+          { image: 'images/ProductDetails/img74.jpeg' }
+        ],
+        name: 'Daphne Glass Appetizer Plate Set Of 8',
+        sku: 'GD008',
+        description: 'Image 70',
+        summary: 'Fresh Start. Decorative pressed-glass appetizer plates dish small bites with vintage attitude.',
+        moresummary: `Layer with your dinnerware for a fresh take on everyday. Pair with Daphne Low Glass Bowl.
+        <ul>
+            <li>7.5" dia. x 1"H</li>
+            <li>Soda lime glass</li>
+            <li>Dishwasher- and microwave-safe</li>
+            <li>Made in Vietnam</li>
+        </ul>`,
+        price: 19.95
+      },
+  ];
+  $scope.products = product;
+  Array.prototype.getIndexOf = function(el) {
+    var arr = this;
+    for (var i=0; i<arr.length; i++){
+       console.log(arr[i].id);
+       if(arr[i].id==el){
+         return i;
+       }
+    }
+    return -1;
+  };
+  var getIndex = function(){
+    var paramId = $stateParams.productId;
+    return product.getIndexOf(paramId);
+  };
+  $scope.direction = 'left';
+  $scope.currentIndex = product.getIndexOf('004');
+
+  $scope.isCurrentSlideIndex = function (index) {
+      return $scope.currentIndex === index;
+  };
+
+  $scope.prevSlide = function () {
+      $scope.direction = 'left';
+      $scope.currentIndex = ($scope.currentIndex < $scope.products.length - 1) ? ++$scope.currentIndex : 0;
+  };
+
+  $scope.nextSlide = function () {
+      $scope.direction = 'right';
+      $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.products.length - 1;
+  };
+
+  // function to show price * quantity
+  $scope.qtyFunc = function(vals) {
+    var basePrice = product.price;
+
+    console.log(vals);
+    $('#result').html('$' + (vals * basePrice).toFixed(2));
+  };
+  // end of function to show price * quantity
+
+  $scope.limit = 1;
+  $scope.lessText = "Read less";
+  $scope.moreText = "Read more";
+  $scope.dotsClass = "toggle-dots-grey";
+  $scope.linkClass = "toggle-link-yellow";
 }]);

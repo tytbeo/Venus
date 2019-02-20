@@ -24,7 +24,7 @@
       <div class="Gallery col-lg-10 col-sm-9">
         <div class="row pics">
           <div ng-repeat='product in filterData = (products | filter : filterText ) | limitTo:8:8*(page-1)' class="col-sm-6 col-xl-3 col-lg-4 gal-item {{product.class}}">
-            <a href="">
+            <a ui-sref='details({ ProductId :  "{{product.id}}"  })'>
               <img src="{{product.img}}" alt="">
               <div class="content">{{product.name}}</div>
             </a>
@@ -34,7 +34,7 @@
         <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
 
          ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=8 rotate='false'></uib-pagination>
-        
+
       </div>
     </div>
 

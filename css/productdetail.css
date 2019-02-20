@@ -1,0 +1,138 @@
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-display {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#product-image, img {
+  max-width: 100%;
+}
+
+.product-data > .product-preview > .slider-for {
+  outline: 5px solid white;
+}
+
+.product-data .brand-logo {
+  height: 1em;
+}
+
+.product-data > .product-details {
+  text-align: justify;
+}
+
+.product-data > .product-details > p {
+  display: inline;
+}
+
+.product-data > .product-details > span {
+  display: inline;
+}
+
+.product-details > button {
+  display: none;
+}
+
+.product-options h4 {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.product-options h4+span {
+  float: right;
+  cursor: pointer;
+}
+
+.product-options h4+span:hover {
+  color: #369;
+}
+
+.quantity {
+  border-radius: 0;
+  border: 1px solid black;
+  line-height: 2;
+  width: 80%;
+}
+
+.price sup {
+  font-size: 55%;
+}
+
+.addcart {
+  border-radius: 0;
+  max-height: 10%;
+  transition: all .3s;
+  transition-timing-function: cubic-bezier(0, .25, .25, 3);
+}
+
+@media(max-width: 768px) {
+  .header .row:first-child {
+    text-align: center;
+  }
+
+  .container {
+    margin: auto;
+  }
+
+  .addcart {
+    max-height: 100%;
+  }
+
+  .product-details > button {
+    display: inline;
+  }
+}
+
+.zoom-btn {
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  border: solid 2px #999;
+  padding: .375em;
+  border-radius: 100%;
+  line-height: 1em;
+  color: #999;
+  z-index: 5;
+}
+
+.arrow {
+    position: absolute;
+    z-index: 1002;
+    display: block;
+    top: 50%;
+    margin-top: -35px;
+    width: 36px;
+    height: 71px;
+    outline: none;
+    cursor: pointer;
+    background: black;
+    /* background: url(../assets/img/blank.gif) no-repeat; */
+}
+
+.arrow.prev {
+    opacity: 0.2;
+    left: 20px;
+    /* background-image: url(../assets/img/paddle_prev_999.png); */
+    transition: 0.2s linear all;
+}
+
+.arrow.next {
+    opacity: 0.2;
+    right: 20px;
+    /* background-image: url(../assets/img/paddle_next_999.png); */
+    transition: 0.2s linear all;
+}
+
+.arrow.prev:hover {
+    opacity: 1;
+    /* background-image: url(../assets/img/paddle_prev_fff.png); */
+}
+
+.arrow.next:hover {
+    opacity: 1;
+    /* background-image: url(../assets/img/paddle_next_fff.png); */
+}

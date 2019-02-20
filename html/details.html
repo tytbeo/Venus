@@ -1,0 +1,87 @@
+<div class="respon" ng-repeat="product in products">
+
+  <div class="row" ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()" ng-hide="!isCurrentSlideIndex($index)">
+    <a class="arrow prev" ng-click="nextSlide()"></a>
+    <a class="arrow next" ng-click="prevSlide()"></a>
+    <!-- Product Display -->
+    <div class="col-md-9 col-sm-8 product-display">
+
+      <!-- Product Image -->
+      <div class="col-lg-6 product-preview">
+        <div class="zoom-btn">
+          <span class="fa fa-search" aria-hidden="true">
+        </div>
+
+        <slick class="slider-for" autoplay="true" lazy-load="ondemand" breakpoint="480" slides-to-show="1" slides-to-scroll="1" fade="true" as-nav-for=".slider-nav">
+          <div light-gallery ng-repeat="imgsource in product.imgsources" data-src="{{ imgsource.image }}">
+            <img ng-src="{{ imgsource.image }}">
+          </div>
+        </slick>
+        <br>
+        <slick class="slider-nav" lazy-load="ondemand" dots="true" slides-to-show="3" slides-to-scroll="1" center-mode="true" focus-on-select="true" as-nav-for=".slider-for">
+          <div ng-repeat="imgsource in product.imgsources">
+            <img ng-src="{{ imgsource.image }}">
+          </div>
+        </slick>
+      </div>
+      <!-- End of Product Image -->
+
+      <!-- Product Description -->
+      <div class="col-lg-6 product-data">
+        <h3> {{ product.name }}</h3>
+        <h5>SKU: {{ product.sku }}</h5>
+        <div class="product-details">
+          <!-- ReadMore/Less text -->
+          <p> {{ product.summary }} </p>
+
+          <span id="more" hm-read-more hm-text="{{product.moresummary}}" hm-limit="{{limit}}" hm-more-text="{{moreText}}" hm-less-text="{{lessText}}" hm-dots-class="{{dotsClass}}" hm-link-class="{{linkClass}}">
+            <!-- <ul>
+                <li ng-repeat="detail in product.details"> {{ detail.list }} </li>
+              </ul> -->
+          </span>
+
+          <!-- End of ReadMore/Less text -->
+        </div>
+      </div>
+      <!-- End of Product Description -->
+
+    </div>
+    <!-- End of Product Display -->
+
+    <!-- Product Buy -->
+    <div class="col-md-3 col-sm-4 product-options well">
+      <h4>Quantity</h4>
+      <div class="form-group">
+        <input ng-change="qtyFunc(quantity)" ng-model="quantity" class="form-control quantity" value="1" type="number" pattern="[0-9]*" inputmode="numeric" min="1" />
+      </div>
+      <div class="price">
+        <h1 id="result">{{ product.price | currency }}</h1>
+
+        <!-- <h1 id="result">{{ product.price | currency }}</h1> -->
+      </div>
+      <button type="submit" ng-click="addItemToCart(product)" class="btn btn-dark btn-block addcart">Add to cart</button>
+    </div>
+    <!-- End of Product Buy -->
+
+    <!-- ViewCart -->
+    <button type="button" class="openbtn btn btn-dark" ng-click="cartStyle={'width': '250px'}">View Cart</button>
+    <!-- End of ViewCart -->
+
+    <!-- Cart Show -->
+    <div id="cart" class="viewcart" ng-show="cart.length !== 0" ng-style="cartStyle">
+      <a class="closebtn" ng-click="cartStyle={'width': '0'}">&times;</a>
+      <h1>CART-SHOW</h1>
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="c in cart">
+          <h4>{{c.name}} | <span style="color:blue"> {{c.count}} </span>
+            | {{c.price*c.count | currency}}</h4>
+          <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove" />
+        </li>
+      </ul>
+
+      Total : {{total | currency}}
+    </div>
+    <!-- End of CartShow -->
+
+  </div>
+</div>
