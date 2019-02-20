@@ -179,6 +179,6 @@ app.controller('aboutusCtrl',['$scope', function($scope){
 }]);
 app.controller('detailsCtrl',['$scope', '$stateParams',function($scope, $stateParams){
   $scope.productId = $stateParams.productId;
-
   
+
 }]);

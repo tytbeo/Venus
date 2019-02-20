@@ -1,7 +1,4 @@
-.gal-item img, .gallery_product {
-  height: 440px;
-  overflow: hidden;
-}
+
 .gallery-title
 {
     font-size: 36px;
@@ -78,7 +75,6 @@
   -webkit-transition: transform  0.7s linear;
   -moz-transition: transform 0.7s linear;
   border-radius: 10px;
-  height: 480px;
   overflow: hidden;
 }
 .gallery_product:hover {

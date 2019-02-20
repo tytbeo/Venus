@@ -1,5 +1,4 @@
 
-
 .banner{
   margin-bottom: 50px;
   height: 100%;
@@ -9,14 +8,14 @@
 .layer {
   position: absolute;
   text-align: center;
-  top : 15%;
   text-transform: capitalize;
+  top : 15%;
   left: 35%;
   height: auto;
 }
 .qoute {
-  font-size: 2.5rem;
-  margin-bottom:2rem;
+  font-size: 2.5em;
+  margin-bottom:1em;
   animation-name: show;
   animation-duration: 1s;
   animation-delay: 2.4s;
@@ -46,7 +45,7 @@
 }
 a.findMore {
   padding: 15px 10px;
-  font-size: 1rem;
+  font-size: 1em;
   width: 200px;
   margin: auto;
   border-radius: 5px;
@@ -62,8 +61,8 @@ a.findMore {
 
 }
 .down {
-  font-size: 5rem;
-  margin-bottom:1rem;
+  font-size: 5em;
+  margin-bottom:1em;
   animation-name: slideDown;
   animation-duration: 2s;
   animation-delay: 0.2s;
@@ -92,6 +91,24 @@ a.findMore {
   to {margin-left: 0;opacity: 1}
 }
 /* end animation */
+@media screen and (max-width: 600px) {
+  .layer{display: none};
+}
+@media screen and (max-width: 1000px) {
+  .layer{
+    left: 20%;
+    top :20%
+  }
+  .down{font-size: 2.5rem;margin-bottom: 0}
+  .qoute{font-size: 1.8rem}
+  .a.findMore{font-size: 1rem}
+}
+
+@media screen and (max-width: 1400px) {
+  .down{font-size: 4rem}
+  .qoute{font-size: 2.5rem}
+  .a.findMore{font-size: 1rem}
+}
 .infomation-aboutus{
   background-color: grey;
   outline: grey solid 20px;
