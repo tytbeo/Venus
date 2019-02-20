@@ -109,23 +109,56 @@ a.findMore {
   .qoute{font-size: 2.5rem}
   .a.findMore{font-size: 1rem}
 }
-.infomation-aboutus{
-  background-color: grey;
-  outline: grey solid 20px;
-  border: 2px solid #ffffff;
+.image-about{
+  float: left;
+  display: inline-block;
+  width: 35%;
 }
+.image-about img{
+  width: 100%;
+  height: auto;
+}
+.details{
+  float: right;
+   width:65%;
+   padding: 35px 30px 15px;
+}
+.details .title{
+  margin: 20px 0;
+}
+.details .excerp{
+  margin-bottom: 20px;
+  text-align: left;
+}
+.details .excerp p{
+  font-size:14px;
+  color: #3d3d3d;
+}
+.col-lg-8{
+  background-color: white;
+  padding: 0px !important;
+}
+.content{
+  padding: 0px;
+}
+.aboutus .row .col-lg-8 .container{
+  padding: 0px !important;
+  margin: 0px;
+}
+.aboutus .row{
+  margin: auto;
+}
+.button-about button{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
 
-.infomation-aboutus .h3{
-  padding: 10px;
-  text-align: center;
-  font-size: 36px;
-  line-height: 1.2;
-  text-transform: uppercase;
 }
-.infomation-aboutus .details{
-  padding: 20px;
-  text-align: justify;
-  font-size: 17px;
+.gallery-at-home img{
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin: auto;
 }
 .owl-theme .owl-nav {
     position: relative;
