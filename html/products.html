@@ -12,13 +12,13 @@
               <li ng-click='filterText="teacup"'><a href="">tea cups</a></li>
             </ul>
           </li>
-          <li><a href="">glass</a></li>
-          <li><a href="">wood</a></li>
-          <li><a href="">decorative object</a></li>
-          <li><a href="">table wares</a></li>
-          <li><a href="">home decor</a></li>
-          <li><a href="">candle accessories</a></li>
-          <li><a href="">others</a></li>
+          <li ng-click='filterText="glass"'><a href="">glass</a></li>
+          <li ng-click='filterText="wood"'><a href="">wood</a></li>
+          <li ng-click='filterText="candle"'><a href="">candle accessories</a></li>
+          <li ng-click='filterText="Tables-wares"'><a href="">table wares</a></li> 
+          <li ng-click='filterText="home-decor"'><a href="">home decor</a></li>
+          <li ng-click='filterText="decorative-object"'><a href="">decorative object</a></li>
+          <li ng-click='filterText="others"'><a href="">others</a></li>
         </ul>
       </div>
       <div class="Gallery col-lg-10 col-sm-9">
@@ -26,7 +26,9 @@
           <div ng-repeat='product in filterData = (products | filter : filterText ) | limitTo:8:8*(page-1)' class="col-sm-6 col-xl-3 col-lg-4 gal-item {{product.class}}">
             <a ui-sref='details({ ProductId :  "{{product.id}}"  })'>
               <img src="{{product.img}}" alt="">
-              <div class="content">{{product.name}}</div>
+              <div class="content">
+                <div class="product-name">{{product.name}}</div>
+              </div>
             </a>
           </div>
         </div>

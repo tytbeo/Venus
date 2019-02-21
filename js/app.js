@@ -78,7 +78,7 @@ app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
   });
 }]);
 app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope){
-  var tag = [{tagName:'teapot'},{tagName:'ceramic'},{tagName:'vase'},{tagName:'teacup'},{tagName:'glass'},{tagName:'candle'},{tagName:'home-decor'},{tagName:'wood'},{tagName:'table-wares'},{tagName:'decorative-object'}]
+  var tag = [{tagName:'teapot'},{tagName:'ceramic'},{tagName:'vase'},{tagName:'teacup'},{tagName:'glass'},{tagName:'candle'},{tagName:'home-decor'},{tagName:'wood'},{tagName:'Tables-wares'},{tagName:'decorative-object'}]
   $scope.tags = tag;
   var product = [
     {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
@@ -108,9 +108,8 @@ app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope)
     {class:'home-decor',name:'Nassa basket pendant light',img:'images/Home Decor/Nassa basket pendant light.jpg'},
     {class:'home-decor',name:'golden barrel cactus',img:'images/Home Decor/Potted 6 faux golden barrel cactus.jpg'},
     {class:'Tables-wares',name:'Custome Wedding Table',img:'images/Tables wares/Custome Wedding Table.jpg'},
-    {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
     {class:'Tables-wares',name:'stunning vintage plate',img:'images/Tables wares/stunning vintage French Limoges porcelain decorative collectable plate.jpg'},
-
+    {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
   ]
   $scope.products = product;
   $(document).ready(function() {
@@ -139,14 +138,12 @@ app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope
     {id:'004',class:'tableware',name:'RUSH BRUSHED GOLD FLATWARE SET',img:'images/ProductDetails/img30.jpeg'},
     {id:'005',class:'home-decor',name:'BONDI MOSAIC WALL DECOR',img:'images/ProductDetails/img40.jpeg'},
     {id:'006',class:'home-decor',name:'4 STAR PILLAR CANDLE HOLDERS',img:'images/ProductDetails/img50.jpeg'},
-    {id:'007',class:'wood',name:'ARTEMIS ROUND DINING TABLE',img:'images/ProductDetails/img60.jpeg'},
     {id:'008',class:'tableware',name:'DAPHNE GLASS APPETIZER PLATE SET OF 8',img:'images/ProductDetails/img70.jpeg'},
-    
+    {id:'007',class:'wood',name:'ARTEMIS ROUND DINING TABLE',img:'images/ProductDetails/img60.jpeg'},
     {id:'009',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
     {id:'010',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
     {id:'011',class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
     {id:'012',class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {id:'013',class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
     {id:'014',class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
     {class:'vase ceramic',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
     {class:'vase ceramic',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
@@ -169,9 +166,8 @@ app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope
     {class:'home-decor',name:'Nassa basket pendant light',img:'images/Home Decor/Nassa basket pendant light.jpg'},
     {class:'home-decor',name:'golden barrel cactus',img:'images/Home Decor/Potted 6 faux golden barrel cactus.jpg'},
     {class:'Tables-wares',name:'Custome Wedding Table',img:'images/Tables wares/Custome Wedding Table.jpg'},
-    {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
     {class:'Tables-wares',name:'stunning vintage plate',img:'images/Tables wares/stunning vintage French Limoges porcelain decorative collectable plate.jpg'},
-
+    {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
   ]
   $scope.products = product;
   $scope.page = 1;

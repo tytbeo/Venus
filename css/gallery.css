@@ -70,17 +70,17 @@
     -webkit-transition: transform 0.5s ease-in;
     -moz-transition: transform 0.5s ease-in;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 .img-responsive {
   -webkit-transition: transform  0.7s linear;
   -moz-transition: transform 0.7s linear;
   border-radius: 10px;
-  overflow: hidden;
 }
 .gallery_product:hover {
   transform: scale(0.92);
   border-radius: 10px;
 }
 .gallery_product:hover .img-responsive {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }

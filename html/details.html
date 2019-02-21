@@ -57,26 +57,7 @@
     </div>
     <!-- End of Product Buy -->
 
-    <!-- ViewCart -->
-    <button type="button" class="openbtn btn btn-dark" ng-click="cartStyle={'width': '250px'}">View Cart</button>
-    <!-- End of ViewCart -->
-
-    <!-- Cart Show -->
-    <div id="cart" class="viewcart" ng-show="cart.length !== 0" ng-style="cartStyle">
-      <a class="closebtn" ng-click="cartStyle={'width': '0'}">&times;</a>
-      <h1>CART-SHOW</h1>
-      <ul class="list-group">
-        <li class="list-group-item" ng-repeat="c in cart">
-          <h4>{{c.name}} | <span style="color:blue"> {{c.count}} </span>
-            | {{c.price*c.count | currency}}</h4>
-          <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove" />
-        </li>
-      </ul>
-
-      Total : {{total | currency}}
-      <div><a ui-sref='cart'>view cart</a></div>
-    </div>
-    <!-- End of CartShow -->
+    
 
   </div>
 </div>

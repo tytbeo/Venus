@@ -1,7 +1,27 @@
 body {
   font-family: "Lato", sans-serif;
 }
-
+.cart-icon {
+  font-size: 2.5rem;
+  color: #333333;
+  z-index: 9999;
+  position: fixed;
+  right : 20px;
+  top : 10%;
+  cursor: pointer;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+}
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  10% {transform: rotate(-10deg);}
+  40% {transform: rotate(10deg);}
+  70% {transform: rotate(-5deg);}
+  85% {transform: rotate(5deg);}
+  100% {transform: rotate(0deg);}
+}
 .viewcart {
   height: 100%;
   width: 0px;
@@ -13,29 +33,43 @@ body {
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding-top: 60px;
 }
-
-.viewcart a {
-  padding: 8px 8px 8px 32px;
+.cart-head {
+  height: 10%;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  top : 0;
+}
+.cart-body {
+  height: 85%;
+  position: absolute;
+  top : 10%;
+  overflow-y: scroll;
+  width: 100%;
+}
+.cart-foot {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  top :95%;
+  font-size: 2rem;
+  padding-left: 30px;
+}
+.viewcart a , .viewcart h3 {
+  margin-left: 1rem;
+  display: inline-block;
+  color: white!important;
+}
+.viewcart .closebtn {
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+  font-size: 2rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .viewcart a:hover {
   color: #f1f1f1;
-}
-
-.viewcart .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
 }
 
 @media screen and (max-height: 450px) {

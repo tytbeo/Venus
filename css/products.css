@@ -14,7 +14,9 @@
   transform: scale(1.05);
   box-shadow: 2px 3px rgb(185, 187, 190);
 }
-
+.gal-item img, .content{
+  border: 1px solid black;
+}
 .pics a {
   display: block;
   transition: all 0.3s ease-in;
@@ -26,11 +28,19 @@
   text-transform: uppercase;
   width: 100%;
   color: black;
-  padding: 10px 0;
+  height: auto;
+  border-top: none;
+  padding: 10px 0!important;
   background-color: #FFFFFF;
   transition: 0.7s ease;
-}
 
+}
+.product-name {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 1.5rem;
+}
 h1.text-center {
   margin: 3rem 0;
 }
@@ -47,7 +57,7 @@ h1.text-center {
   top: 1px;
   bottom: 1px;
   text-align: center;
-  line-height: 400px;
+  line-height: 300px;
   font-size: 20px;
   color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
