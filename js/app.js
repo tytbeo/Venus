@@ -133,12 +133,21 @@ app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope)
 } ]);
 app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope){
   var product = [
-    {id:'001',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
-    {id:'002',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
-    {id:'003',class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
-    {id:'004',class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {id:'005',class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
-    {id:'006',class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
+    {id:'001',class:'home-decor',name:'RAW MARBLE OBJECT',img:'images/ProductDetails/img00.jpeg'},
+    {id:'002',class:'vase ceramic',name:'SUR REACTIVE VASE',img:'images/ProductDetails/img10.jpeg'},
+    {id:'003',class:'wood',name:'FUEL NAVY CREDENZA',img:'images/ProductDetails/img20.jpeg'},
+    {id:'004',class:'tableware',name:'RUSH BRUSHED GOLD FLATWARE SET',img:'images/ProductDetails/img30.jpeg'},
+    {id:'005',class:'home-decor',name:'BONDI MOSAIC WALL DECOR',img:'images/ProductDetails/img40.jpeg'},
+    {id:'006',class:'home-decor',name:'4 STAR PILLAR CANDLE HOLDERS',img:'images/ProductDetails/img50.jpeg'},
+    {id:'007',class:'wood',name:'ARTEMIS ROUND DINING TABLE',img:'images/ProductDetails/img60.jpeg'},
+    {id:'008',class:'tableware',name:'DAPHNE GLASS APPETIZER PLATE SET OF 8',img:'images/ProductDetails/img70.jpeg'},
+    
+    {id:'009',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
+    {id:'010',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
+    {id:'011',class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
+    {id:'012',class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
+    {id:'013',class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
+    {id:'014',class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
     {class:'vase ceramic',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
     {class:'vase ceramic',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
     {class:'teacup ceramic',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
