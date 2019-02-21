@@ -85,7 +85,7 @@ app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope)
     {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
     {class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
     {class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/SurReactiveVaseSHS19/?$web_product_hero$&180917104904&wid=625&hei=625'},
+    {class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/WovenBlkSuedeBedQ3QS19/$web_spilllarge3$/190220083544/WovenBlkSuedeBedQ3QS19.jpg'},
     {class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
     {class:'vase ceramic',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
     {class:'vase ceramic',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
