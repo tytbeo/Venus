@@ -85,7 +85,7 @@ app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope)
     {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
     {class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
     {class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {class:'vase ceramic',name:'CERAMIC VASE',img:'https://cb2.scene7.com/is/image/CB2/WovenBlkSuedeBedQ3QS19/$web_spilllarge3$/190220083544/WovenBlkSuedeBedQ3QS19.jpg'},
+    {class:'vase ceramic',name:'CERAMIC VASE',img:'images/ProductDetails/img10.jpeg'},
     {class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
     {class:'vase ceramic',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
     {class:'vase ceramic',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
@@ -135,7 +135,7 @@ app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope
   var product = [
     {id:'001',class:'home-decor',name:'RAW MARBLE OBJECT',img:'images/ProductDetails/img00.jpeg'},
     {id:'002',class:'vase ceramic',name:'SUR REACTIVE VASE',img:'images/ProductDetails/img10.jpeg'},
-    {id:'003',class:'wood',name:'FUEL NAVY CREDENZA',img:'https://cb2.scene7.com/is/image/CB2/DorsetMrblCoffeeTblSHS19_16x9/?$web_zoom_furn_hero$&181105155417&wid=1008&hei=567'},
+    {id:'003',class:'wood',name:'FUEL NAVY CREDENZA',img:'https://cb2.scene7.com/is/image/CB2/WovenBlkSuedeBedQ3QS19/$web_spilllarge3$/190220083544/WovenBlkSuedeBedQ3QS19.jpg'},
     {id:'004',class:'tableware',name:'RUSH BRUSHED GOLD FLATWARE SET',img:'images/ProductDetails/img30.jpeg'},
     {id:'005',class:'home-decor',name:'BONDI MOSAIC WALL DECOR',img:'images/ProductDetails/img40.jpeg'},
     {id:'006',class:'home-decor',name:'4 STAR PILLAR CANDLE HOLDERS',img:'images/ProductDetails/img50.jpeg'},
