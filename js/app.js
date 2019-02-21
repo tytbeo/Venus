@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ui.router','ui.bootstrap','ngAnimate', 'ngTouch', 'ngCookies', 'slick', 'ngMaterial', 'hm.readmore']);
+var app = angular.module('myApp',['ui.router','ui.bootstrap','ngCookies', 'slick', 'ngMaterial', 'hm.readmore']);
 
 app.config(function($stateProvider,$urlRouterProvider) {
   $urlRouterProvider.otherwise('/home')
@@ -27,6 +27,11 @@ app.config(function($stateProvider,$urlRouterProvider) {
     url: '/contactus',
     templateUrl : "html/contactus.html",
     controller : "contactusCtrl"
+  })
+  .state("cart", {
+    url: '/cart',
+    templateUrl : "html/cart.html",
+    controller : "cartCtrl"
   })
   .state('details', {
         url: "/details/:ProductId",
@@ -178,6 +183,7 @@ app.controller('aboutusCtrl',['$scope', function($scope){
   });
 }]);
 app.controller('detailsCtrl',['$scope', '$stateParams','$cookies',function($scope, $stateParams,$cookies){
+  $scope.productId = $stateParams.ProductId;
   var product = [
       {
         id : '001' ,
@@ -377,22 +383,6 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies',function($scop
   var getIndex = function(){
     var paramId = $stateParams.productId;
     return product.getIndexOf(paramId);
-  };
-  $scope.direction = 'left';
-  $scope.currentIndex = product.getIndexOf('004');
-
-  $scope.isCurrentSlideIndex = function (index) {
-      return $scope.currentIndex === index;
-  };
-
-  $scope.prevSlide = function () {
-      $scope.direction = 'left';
-      $scope.currentIndex = ($scope.currentIndex < $scope.products.length - 1) ? ++$scope.currentIndex : 0;
-  };
-
-  $scope.nextSlide = function () {
-      $scope.direction = 'right';
-      $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.products.length - 1;
   };
 
   // function to show price * quantity
