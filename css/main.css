@@ -69,7 +69,6 @@ a:hover {
 }
 /* footer */
 footer {
-  height: 100px;
   box-sizing: border-box;
   margin: 4rem 0;
 }
@@ -80,19 +79,16 @@ footer {
   width: 80%;
   margin:auto;
 }
-.footer-menu , .foot>p {
-  margin: auto 0;
+.footer-tiltle h2{
+  margin-bottom:15px;
 }
-.footer-menu a{
-  color : black;
-  padding: 0 15px;
-  border-left: 1px solid black;
-  text-transform: capitalize;
+.FooterLink a p{
+  font-size:14px;
+  margin-bottom: 0;
 }
-.contact2 a{
-  font-size: 1.8rem;
-  color: black;
-  margin-left: 20px;
+.footer-column p{
+  font-size: 14px;
+  margin-bottom: 0px;
 }
 /* responsive .
 put this code in the end*/
