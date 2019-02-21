@@ -139,7 +139,7 @@ app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope
     {id:'005',class:'home-decor',name:'BONDI MOSAIC WALL DECOR',img:'images/ProductDetails/img40.jpeg'},
     {id:'006',class:'home-decor',name:'4 STAR PILLAR CANDLE HOLDERS',img:'images/ProductDetails/img50.jpeg'},
     {id:'008',class:'tableware',name:'DAPHNE GLASS APPETIZER PLATE SET OF 8',img:'images/ProductDetails/img70.jpeg'},
-    {id:'007',class:'wood',name:'ARTEMIS ROUND DINING TABLE',img:'images/ProductDetails/img60.jpeg'},
+    {id:'007',class:'wood',name:'ARTEMIS ROUND DINING TABLE',img:'https://cb2.scene7.com/is/image/CB2/ArtemisRoundDiningTableSHS16_1x1/$web_spilllarge3$/160315164030/artemis-round-dining-table.jpg'},
     {id:'009',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
     {id:'010',class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
     {id:'011',class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
