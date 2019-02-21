@@ -139,7 +139,7 @@ a.findMore {
   padding: 0px !important;
 }
 .content{
-  padding: 0px;
+  padding: 0px !important;
 }
 .aboutus .row .col-lg-8 .container{
   padding: 0px !important;
@@ -157,7 +157,7 @@ a.findMore {
 .gallery-at-home img{
   width: 100%;
   height: auto;
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
 }
 .owl-theme .owl-nav {
@@ -189,7 +189,7 @@ a.findMore {
   width: 100%;
 }
 .title h1{
-  color: #c00404;
+  color: black;
   font-weight: bold;
   font-size: 36px;
 }
