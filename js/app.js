@@ -135,7 +135,7 @@ app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope
   var product = [
     {id:'001',class:'home-decor',name:'RAW MARBLE OBJECT',img:'images/ProductDetails/img00.jpeg'},
     {id:'002',class:'vase ceramic',name:'SUR REACTIVE VASE',img:'images/ProductDetails/img10.jpeg'},
-    {id:'003',class:'wood',name:'FUEL NAVY CREDENZA',img:'images/ProductDetails/img20.jpeg'},
+    {id:'003',class:'wood',name:'FUEL NAVY CREDENZA',img:'images/ProductDetails/img21.jpeg'},
     {id:'004',class:'tableware',name:'RUSH BRUSHED GOLD FLATWARE SET',img:'images/ProductDetails/img30.jpeg'},
     {id:'005',class:'home-decor',name:'BONDI MOSAIC WALL DECOR',img:'images/ProductDetails/img40.jpeg'},
     {id:'006',class:'home-decor',name:'4 STAR PILLAR CANDLE HOLDERS',img:'images/ProductDetails/img50.jpeg'},
