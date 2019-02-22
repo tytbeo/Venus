@@ -399,6 +399,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies',function($scop
   };
   // end of function to show price * quantity
 
+  // Read more
   $scope.limit = 1;
   $scope.lessText = "Read less";
   $scope.moreText = "Read more";
