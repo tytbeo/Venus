@@ -47,8 +47,30 @@ app.factory('items', function() {
     var itemsService = {};
 
     itemsService.add = function(item) {
-        items.push(item);
-        console.log(items);
+        if(items.length>0){
+          var count = 0;
+          for(var i = 0; i<items.length ;i++){
+            if(item.sku === items[i].sku){
+              items[i].quantity = item.quantity + items[i].quantity;
+              items[i].total = item.total + items[i].total;
+              break;
+            }
+            else {
+              count += 1;
+              if(count == items.length){
+                items.push(item);
+                break;
+              }
+              else {
+                continue;
+              }
+             };
+          };
+        }
+        else {
+          items.push(item);
+        };
+
     };
     itemsService.list = function() {
         return items;
@@ -102,11 +124,11 @@ app.controller('mainCtrl',['$scope','$rootScope','items', function($scope,$rootS
   $scope.delete = items.delete;
   $scope.totals =  0;
   $(document).ready(function() {
+    $('button.addcart').on('click',function(){
+      $('#cart').addClass('width250');
+    });
     $('.cart-icon').on('click',function(){
       $('#cart').toggleClass('width250 width0');
-    });
-    $('.addcart').on('click',function(){
-      $('#cart').addClass('width250');
     });
     $('.cart-head .closebtn').on('click',function(){
       $('#cart').removeClass('width250');
@@ -383,7 +405,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$rootScope','items',func
       },
   ];
   $scope.products = product;
-  $scope.quantity = 1;
+  $scope.quantity =  1;
   // end of function to show price * quantity
 
   // Read more
@@ -395,9 +417,9 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$rootScope','items',func
 
   // view cart
   $scope.addItemToCart = function(arr,qty){
-    arr.qty = qty;
-    arr.total = arr.qty * arr.price;
+    arr.quantity = qty;
+    arr.total = arr.quantity * arr.price;
     items.add(arr);
-
+    console.log(arr.qty);
   };
 }]);
