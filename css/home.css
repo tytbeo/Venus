@@ -138,7 +138,7 @@ a.findMore {
   background-color: white;
   padding: 0px !important;
 }
-.content-about{
+.content{
   padding: 0px !important;
 }
 .aboutus .row .col-lg-8 .container{
@@ -150,9 +150,16 @@ a.findMore {
 }
 .button-about button{
   background-color: white;
-  color: black;
+  color: #6c6b6b;
   border: 2px solid black;
-
+  padding: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.button-about button:hover{
+  color: white;
+  background: #474747;
+  border: black;
 }
 .gallery-at-home img{
   width: 100%;
