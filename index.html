@@ -96,20 +96,20 @@
   <!-- Cart Show -->
   <div id="cart" class="viewcart" ng-show="cart.length !== 0" ng-style="cartStyle">
     <div class="cart-head">
-      <h3>CART-SHOW</h3>
-      <a class="closebtn" ng-click="cartStyle={'width': '0'}">&times;</a>
+      <h3>CART</h3>
+      <a class="closebtn" ng-click="cartStyle={'width': '0'}" title="Close cart widget"> &lt; </a>
     </div>
     <div class="cart-body">
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="c in carts">
+        <li class="list-group-item" ng-repeat="c in cart">
           <h4>{{c.name}} | <span style="color:blue"> {{c.count}} </span>
             | {{c.price*c.count | currency}}</h4>
           <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove" />
         </li>
       </ul>
-      <h3>Total : {{totals | currency}}</h3>
+      <h3>Total: {{total | currency}}</h3>
     </div>
-    <div class="cart-foot"><a ui-sref='cart'>view cart</a></div>
+    <div class="cart-foot"><a ui-sref='cart'>View Cart</a></div>
   </div>
   <!-- End of CartShow -->
   <div class="contact">
