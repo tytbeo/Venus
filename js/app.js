@@ -42,95 +42,7 @@ app.config(function($stateProvider,$urlRouterProvider) {
         },
     });
 });
-app.controller('mainCtrl',['$scope', function($scope){
-
-}]);
-app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
-  $(document).ready(function() {
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 5,
-      dots: false,
-      nav: true,
-      navText: [
-        "<i class='fa fa-chevron-left'></i>",
-        "<i class='fa fa-chevron-right'></i>"
-      ],
-      autoplay: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        400: {
-          items: 2
-        },
-        767: {
-          items: 3
-        },
-        1023: {
-          items: 4
-        },
-        1300: {
-          items: 5
-        }
-      }
-    });
-  });
-}]);
-app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope){
-  var tag = [{tagName:'teapot'},{tagName:'ceramic'},{tagName:'vase'},{tagName:'teacup'},{tagName:'glass'},{tagName:'candle'},{tagName:'home-decor'},{tagName:'wood'},{tagName:'Tables-wares'},{tagName:'decorative-object'}]
-  $scope.tags = tag;
-  var product = [
-    {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET  3',img:'images/product/product1.jpg'},
-    {class:'teapot ceramic',name:'BLUE GLAZE TEAPOT SET',img:'images/product/product2.jpg'},
-    {class:'teapot ceramic',name:'CERAMIC PITCHER SET 1',img:'images/product/product3.jpg'},
-    {class:'teapot ceramic',name:'CERAMIC PITCHER SET 3',img:'images/product/product10.jpg'},
-    {class:'vase ceramic',name:'CERAMIC VASE',img:'images/ProductDetails/img10.jpeg'},
-    {class:'vase ceramic',name:'BLUE GLAZE VASE',img:'images/product/product6.jpg'},
-    {class:'vase ceramic',name:'PINK & BLUE FLOWER VASE',img:'images/product/product7.jpg'},
-    {class:'vase ceramic',name:'CERAMIC FLOWER VASE',img:'images/product/product8.jpg'},
-    {class:'teacup ceramic',name:'BLUE GLAZE TEA CUP SET',img:'images/product/product5.jpg'},
-    {class:'teacup ceramic',name:'black cup',img:'images/product/coc2.jpg'},
-    {class:'vase ceramic',name:'flower vase ',img:'images/product/vase.jpg'},
-    {class:'candle',name:'golden candle holder',img:'images/candle accessories/Candle1.jpg'},
-    {class:'candle',name:'Nelumbo nucifera candle holder',img:'images/candle accessories/Candle2.jpg'},
-    {class:'candle',name:'glass candle keeper',img:'images/candle accessories/Candle3.jpg'},
-    {class:'candle',name:'glass vase candle holder',img:'images/candle accessories/Candle4.jpg'},
-    {class:'candle',name:'grapple candle',img:'images/candle accessories/Candle5.jpg'},
-    {class:'candle',name:'lantern candle',img:'images/candle accessories/Candle6.jpg'},
-    {class:'glass home-decor',name:'Buoy glass grid vase',img:'images/GLASS/glass1,Buoy glass grid vase.jpg'},
-    {class:'glass',name:'Profile coupe cocktail glass',img:'images/GLASS/glass2, Profile coupe cocktail glass.jpg'},
-    {class:'glass',name:'5-minute turquoise hour glass',img:'images/GLASS/glass3, 5-minute turquoise hour glass.jpg'},
-    {class:'glass',name:'Surge black and white glass vase',img:'images/GLASS/glass4, Surge black and white glass vase.jpg'},
-    {class:'glass',name:'Mars glass pitcher',img:'images/GLASS/glass5,Mars glass pitcher.jpg'},
-    {class:'home-decor',name:'lovely fur pillow',img:'images/Home Decor/16 loves you faux fur pillow with down-alternative insert.jpg'},
-    {class:'home-decor',name:'Loves neon red',img:'images/Home Decor/Loves neon red.jpg'},
-    {class:'home-decor',name:'Nassa basket pendant light',img:'images/Home Decor/Nassa basket pendant light.jpg'},
-    {class:'home-decor',name:'golden barrel cactus',img:'images/Home Decor/Potted 6 faux golden barrel cactus.jpg'},
-    {class:'Tables-wares',name:'Custome Wedding Table',img:'images/Tables wares/Custome Wedding Table.jpg'},
-    {class:'Tables-wares',name:'stunning vintage plate',img:'images/Tables wares/stunning vintage French Limoges porcelain decorative collectable plate.jpg'},
-    {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
-  ]
-  $scope.products = product;
-  $(document).ready(function() {
-    $(".filter-button").on('click' ,function() {
-      var value = $(this).attr('data-filter');
-      $(".filter-button").removeClass("actives");
-      $(this).addClass("actives");
-      if (value == "all") {
-        //$('.filter').removeClass('hidden');
-        $('.filter').show('1000');
-      } else {
-        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-        $(".filter").not('.' + value).hide('slow');
-        $('.filter').filter('.' + value).show('slow');
-
-      }
-    });
-  });
-} ]);
-app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope){
+app.controller('mainCtrl',['$scope','$rootScope', function($scope,$rootScope){
   var product = [
     {id:'001',class:'home-decor',name:'RAW MARBLE OBJECT',img:'images/ProductDetails/img00.jpeg'},
     {id:'002',class:'vase ceramic',name:'SUR REACTIVE VASE',img:'images/ProductDetails/img10.jpeg'},
@@ -169,7 +81,65 @@ app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope
     {class:'Tables-wares',name:'stunning vintage plate',img:'images/Tables wares/stunning vintage French Limoges porcelain decorative collectable plate.jpg'},
     {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
   ]
-  $scope.products = product;
+  $rootScope.productList = product;
+}]);
+app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
+  $(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 5,
+      dots: false,
+      nav: true,
+      navText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+      ],
+      autoplay: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        400: {
+          items: 2
+        },
+        767: {
+          items: 3
+        },
+        1023: {
+          items: 4
+        },
+        1300: {
+          items: 5
+        }
+      }
+    });
+  });
+}]);
+app.controller('galleryCtrl',['$scope','$rootScope', function($scope,$rootScope){
+  var tag = [{tagName:'teapot'},{tagName:'ceramic'},{tagName:'vase'},{tagName:'teacup'},{tagName:'glass'},{tagName:'candle'},{tagName:'home-decor'},{tagName:'wood'},{tagName:'Tables-wares'},{tagName:'decorative-object'}]
+  $scope.tags = tag;
+  $scope.products = $rootScope.productList;
+  $(document).ready(function() {
+    $(".filter-button").on('click' ,function() {
+      var value = $(this).attr('data-filter');
+      $(".filter-button").removeClass("actives");
+      $(this).addClass("actives");
+      if (value == "all") {
+        //$('.filter').removeClass('hidden');
+        $('.filter').show('1000');
+      } else {
+        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+        $(".filter").not('.' + value).hide('slow');
+        $('.filter').filter('.' + value).show('slow');
+
+      }
+    });
+  });
+} ]);
+app.controller('productsCtrl',['$scope','$rootScope', function($scope,$rootScope){
+
+  $scope.products = $rootScope.productList;
   $scope.page = 1;
   $('document').ready(function(){
     $('.submenu').addClass('none');
@@ -187,7 +157,7 @@ app.controller('aboutusCtrl',['$scope', function($scope){
     });
   });
 }]);
-app.controller('detailsCtrl',['$scope', '$stateParams','$cookies',function($scope, $stateParams,$cookies){
+app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',function($scope, $stateParams,$cookies,$rootScope){
   $scope.productId = $stateParams.ProductId;
   var product = [
       {
@@ -375,21 +345,6 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies',function($scop
       },
   ];
   $scope.products = product;
-  Array.prototype.getIndexOf = function(el) {
-    var arr = this;
-    for (var i=0; i<arr.length; i++){
-       console.log(arr[i].id);
-       if(arr[i].id==el){
-         return i;
-       }
-    }
-    return -1;
-  };
-  var getIndex = function(){
-    var paramId = $stateParams.productId;
-    return product.getIndexOf(paramId);
-  };
-
   // function to show price * quantity
   $scope.qtyFunc = function(vals) {
     var basePrice = product.price;
@@ -419,7 +374,6 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies',function($scop
   }
 
   $scope.addItemToCart = function(product) {
-
     if ($scope.cart.length === 0) {
       product.count = 1;
       $scope.cart.push(product);
@@ -442,15 +396,12 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies',function($scop
       'expires': expireDate
     });
     $scope.cart = $cookies.getObject('cart');
-
     $scope.total += parseFloat(product.price);
     $cookies.put('total', $scope.total, {
       'expires': expireDate
     });
   };
-
   $scope.removeItemCart = function(product) {
-
     if (product.count > 1) {
       product.count -= 1;
       var expireDate = new Date();
