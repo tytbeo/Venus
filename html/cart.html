@@ -11,7 +11,7 @@
           </div>
         </div>
 
-        <table class="table">
+        <table class="table" >
             <tr>
               <td>
                   <h3>My Cart</h3>
@@ -23,51 +23,25 @@
               <td class="bottoma">Total</td>
             </tr>
 
-            <tr>
-                <td>
-                    <div>
-                      <img src="" alt="">
+            <tr ng-repeat='c in carts()'>
+                <td class="row cartCart">
+                    <div class="col-5">
+                      <img src="{{c.imgMain}}" alt="" class="imgMain">
                     </div>
-                    <div>
-                      <br>Product Name
-                      <br>SKU: Product Code
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-light">Remove</button>
+                    <div class="col-7">
+                      <div>Product Name {{c.name}}</div>
+                      <div>SKU: {{c.sku}}</div>
+                      <button type="button" class="btn btn-dark" ng-click='delete($index)'>Remove</button>
                     </div>
                 </td>
                 <td>
-                    $ Price
+                     {{c.price | currency}}
                 </td>
                 <td>
-                    Quantity
+                    {{c.quantity}}
                 </td>
                 <td>
-                    $Price * Qty
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <div>
-                      <img src="" alt="">
-                    </div>
-                    <div>
-                      <br>Product Name
-                      <br>SKU: Product Code
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-light">Remove</button>
-                    </div>
-                </td>
-                <td>
-                    $ Price2
-                </td>
-                <td>
-                    Quantity2
-                </td>
-                <td>
-                    $Price * Qty
+                    {{c.total | currency}}
                 </td>
             </tr>
 

@@ -423,3 +423,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$rootScope','items',func
     console.log(arr.qty);
   };
 }]);
+app.controller('cartCtrl',['$scope','$rootScope','items', function($scope,$rootScope,items){
+  $scope.carts =  items.list;
+  $scope.delete = items.delete;
+}]);

@@ -22,6 +22,12 @@ body {
   85% {transform: rotate(5deg);}
   100% {transform: rotate(0deg);}
 }
+.cartCart {
+  max-width: 500px;
+}
+.btn-dark {
+  color: white
+}
 .width0{
   width: = 0!important;
 }
