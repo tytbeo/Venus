@@ -1,7 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
 }
-
 .cart-icon {
   font-size: 2.5rem;
   color: #333333;
@@ -23,70 +22,76 @@ body {
   85% {transform: rotate(5deg);}
   100% {transform: rotate(0deg);}
 }
+.width0{
+  width: = 0!important;
+}
+.width250 {
+  width: 280px!important;
+}
+.list-group-item {
+  padding: 6px!important;
+}
+.list-group-item img, .blockInfo {
+  padding: 4px!important;
+}
+.btn-danger {
+  font-size: 15px;
+  padding: 5px;
+}
 .viewcart {
+  box-sizing: border-box;
   height: 100%;
   width: 0px;
   position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
+  background-color: white;
+  overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .cart-head {
   height: 10%;
-  padding: 2px;
+  padding: 10px;
+  padding-top: 25px;
   position: absolute;
+  background-color: #363636;
   width: 100%;
-  top: 0;
-  padding-top: 20px;
+  color: white;
+  top : 0;
 }
 .cart-body {
-  background-color: white;
   height: 80%;
   position: absolute;
-  top: 12%;
+  top : 10%;
+  overflow-x: hidden;
   overflow-y: scroll;
   width: 100%;
 }
 .cart-foot {
-  height: 5%;
+  height: 10%;
   width: 100%;
   position: absolute;
-  top: 90%;
+  top :90%;
   font-size: 2rem;
-  padding-left: 10px;
-  padding-top: 15px;
+  padding-left: 30px;
+  background-color: #363636;
+  color: white;
 }
-.viewcart a , .viewcart > .cart-head > h3 {
+.viewcart a , .viewcart h3 {
+  margin-left: 1rem;
   display: inline-block;
-  color: white!important;
 }
-
-.viewcart > .cart-head > h3 {
-  margin-left: 5rem;
-}
-
-.viewcart a {
-  margin-left: 3rem;
-}
-
 .viewcart .closebtn {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .viewcart a:hover {
   color: #f1f1f1;
-}
-
-.viewcart > .cart-body > h3 {
-  margin-top: 3rem;
-  margin-left: 1rem;
 }
 
 @media screen and (max-height: 450px) {
