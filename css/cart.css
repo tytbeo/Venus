@@ -22,44 +22,66 @@ body {
   85% {transform: rotate(5deg);}
   100% {transform: rotate(0deg);}
 }
+.width0{
+  width: = 0!important;
+}
+.width250 {
+  width: 280px!important;
+}
+.list-group-item {
+  padding: 6px!important;
+}
+.list-group-item img, .blockInfo {
+  padding: 4px!important;
+}
+.btn-danger {
+  font-size: 15px;
+  padding: 5px;
+}
 .viewcart {
+  box-sizing: border-box;
   height: 100%;
   width: 0px;
   position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
+  background-color: white;
+  overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .cart-head {
   height: 10%;
   padding: 10px;
+  padding-top: 25px;
   position: absolute;
+  background-color: #363636;
   width: 100%;
+  color: white;
   top : 0;
 }
 .cart-body {
-  height: 85%;
+  height: 80%;
   position: absolute;
   top : 10%;
+  overflow-x: hidden;
   overflow-y: scroll;
   width: 100%;
 }
 .cart-foot {
-  height: 5%;
+  height: 10%;
   width: 100%;
   position: absolute;
-  top :95%;
+  top :90%;
   font-size: 2rem;
   padding-left: 30px;
+  background-color: #363636;
+  color: white;
 }
 .viewcart a , .viewcart h3 {
   margin-left: 1rem;
   display: inline-block;
-  color: white!important;
 }
 .viewcart .closebtn {
   text-decoration: none;

@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ui.router','ui.bootstrap','ngCookies', 'slick', 'ngMaterial', 'hm.readmore']);
+var app = angular.module('myApp',['ui.router','ui.bootstrap', 'slick', 'ngMaterial', 'hm.readmore']);
 
 app.config(function($stateProvider,$urlRouterProvider) {
   $urlRouterProvider.otherwise('/home')
@@ -42,7 +42,23 @@ app.config(function($stateProvider,$urlRouterProvider) {
         },
     });
 });
-app.controller('mainCtrl',['$scope','$rootScope', function($scope,$rootScope){
+app.factory('items', function() {
+    var items = [];
+    var itemsService = {};
+
+    itemsService.add = function(item) {
+        items.push(item);
+        console.log(items);
+    };
+    itemsService.list = function() {
+        return items;
+    };
+    itemsService.delete = function(index) {
+        items.splice(index,1);
+    };
+    return itemsService;
+});
+app.controller('mainCtrl',['$scope','$rootScope','items', function($scope,$rootScope,items){
   var product = [
     {id:'001',class:'home-decor',name:'RAW MARBLE OBJECT',img:'images/ProductDetails/img00.jpeg'},
     {id:'002',class:'vase ceramic',name:'SUR REACTIVE VASE',img:'images/ProductDetails/img10.jpeg'},
@@ -82,8 +98,20 @@ app.controller('mainCtrl',['$scope','$rootScope', function($scope,$rootScope){
     {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
   ]
   $rootScope.productList = product;
-   $scope.carts = $rootScope.bigCart ;
-   $scope.totals = $rootScope.bigTotal ;
+  $scope.carts =  items.list;
+  $scope.delete = items.delete;
+  $scope.totals =  0;
+  $(document).ready(function() {
+    $('.cart-icon').on('click',function(){
+      $('#cart').toggleClass('width250 width0');
+    });
+    $('.addcart').on('click',function(){
+      $('#cart').addClass('width250');
+    });
+    $('.cart-head .closebtn').on('click',function(){
+      $('#cart').removeClass('width250');
+    });
+  });
 }]);
 app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
   $(document).ready(function() {
@@ -159,11 +187,12 @@ app.controller('aboutusCtrl',['$scope', function($scope){
     });
   });
 }]);
-app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',function($scope, $stateParams,$cookies,$rootScope){
+app.controller('detailsCtrl',['$scope', '$stateParams','$rootScope','items',function($scope, $stateParams,$rootScope,items){
   $scope.productId = $stateParams.ProductId;
   var product = [
       {
         id : '001' ,
+        imgMain : 'images/ProductDetails/img00.jpeg',
         imgsources: [
           { image: 'images/ProductDetails/img00.jpeg' },
           { image: 'images/ProductDetails/img01.jpeg' },
@@ -186,6 +215,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
       },
       {
         id : '002' ,
+        imgMain : 'images/ProductDetails/img10.jpeg',
         imgsources: [
           { image: 'images/ProductDetails/img10.jpeg' },
           { image: 'images/ProductDetails/img11.jpeg' },
@@ -209,6 +239,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
       },
       {
         id : '003' ,
+        imgMain : 'images/ProductDetails/img20.jpeg',
         imgsources: [
           { image: 'images/ProductDetails/img20.jpeg' },
           { image: 'images/ProductDetails/img21.jpeg' },
@@ -233,6 +264,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
       },
       {
         id : '004',
+        imgMain : 'images/ProductDetails/img30.jpeg',
         imgsources: [
           { image: 'images/ProductDetails/img30.jpeg' },
           { image: 'images/ProductDetails/img31.jpeg' },
@@ -256,6 +288,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
       },
       {
         id : '005',
+        imgMain : 'images/ProductDetails/img40.jpeg',
         imgsources: [
           { image: 'images/ProductDetails/img40.jpeg' },
           { image: 'images/ProductDetails/img41.jpeg' },
@@ -279,6 +312,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
       },
       {
         id : '006',
+        imgMain : 'images/ProductDetails/img50.jpeg',
         imgsources: [
           { image: 'images/ProductDetails/img50.jpeg' },
           { image: 'images/ProductDetails/img51.jpeg' },
@@ -302,6 +336,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
       },
       {
         id : '007',
+        imgMain : 'images/ProductDetails/img60.jpeg',
         imgsources: [
           { image: 'images/ProductDetails/img60.jpeg' },
           { image: 'images/ProductDetails/img61.jpeg' },
@@ -325,6 +360,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
       },
       {
         id : '008',
+        imgMain : 'images/ProductDetails/img70.jpeg',
         imgsources: [
           { image: 'images/ProductDetails/img70.jpeg' },
           { image: 'images/ProductDetails/img71.jpeg' },
@@ -347,18 +383,7 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
       },
   ];
   $scope.products = product;
-  // function to show price * quantity
-  $scope.qtyFunc = function(vals) {
-    for (var i = 0; i < product.length; i++) {
-      if ($scope.productId == product[i].id){
-        var basePrice = product[i].price;
-        console.log(basePrice);
-      }
-    }
-    console.log(vals);
-
-    $('#result').html('$' + (vals * basePrice).toFixed(2));
-  };
+  $scope.quantity = 1;
   // end of function to show price * quantity
 
   // Read more
@@ -369,71 +394,10 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
   $scope.linkClass = "toggle-link-yellow";
 
   // view cart
-  $scope.cart = [];
-  $scope.total = 0;
-  $rootScope.bigCart = $scope.cart;
-  $rootScope.bigTotal = $scope.total;
-  if (!angular.isUndefined($cookies.get('total'))) {
-    $scope.total = parseFloat($cookies.get('total'));
-  }
-  //Sepetimiz daha önceden tanımlıysa onu çekelim
-  if (!angular.isUndefined($cookies.get('cart'))) {
-    $scope.cart = $cookies.getObject('cart');
-  }
-
-  $scope.addItemToCart = function(product) {
-    if ($scope.cart.length === 0) {
-      product.count = 1;
-      $scope.cart.push(product);
-    } else {
-      var repeat = false;
-      for (var i = 0; i < $scope.cart.length; i++) {
-        if ($scope.cart[i].id === product.id) {
-          repeat = true;
-          $scope.cart[i].count += 1;
-        }
-      }
-      if (!repeat) {
-        product.count = 1;
-        $scope.cart.push(product);
-      }
-    }
-    var expireDate = new Date();
-    expireDate.setDate(expireDate.getDate() + 1);
-    $cookies.putObject('cart', $scope.cart, {
-      'expires': expireDate
-    });
-    $scope.cart = $cookies.getObject('cart');
-    $scope.total += parseFloat(product.price);
-    $cookies.put('total', $scope.total, {
-      'expires': expireDate
-    });
-  };
-  $scope.removeItemCart = function(product) {
-    if (product.count > 1) {
-      product.count -= 1;
-      var expireDate = new Date();
-      expireDate.setDate(expireDate.getDate() + 1);
-      $cookies.putObject('cart', $scope.cart, {
-        'expires': expireDate
-      });
-      $scope.cart = $cookies.getObject('cart');
-    } else if (product.count === 1) {
-      var index = $scope.cart.indexOf(product);
-      $scope.cart.splice(index, 1);
-      expireDate = new Date();
-      expireDate.setDate(expireDate.getDate() + 1);
-      $cookies.putObject('cart', $scope.cart, {
-        'expires': expireDate
-      });
-      $scope.cart = $cookies.getObject('cart');
-
-    }
-
-    $scope.total -= parseFloat(product.price);
-    $cookies.put('total', $scope.total, {
-      'expires': expireDate
-    });
+  $scope.addItemToCart = function(arr,qty){
+    arr.qty = qty;
+    arr.total = arr.qty * arr.price;
+    items.add(arr);
 
   };
 }]);

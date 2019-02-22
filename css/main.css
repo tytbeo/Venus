@@ -5,6 +5,7 @@ body {
   background-color: #F2F1F0 !important;
   font-family: 'Roboto Mono', monospace;
   height: auto;
+  min-height: 100%;
 }
 a {
   text-decoration: none !important;

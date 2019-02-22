@@ -26,14 +26,12 @@
   <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
   <!-- AngularJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-cookies.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-animate.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-aria.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
   <script src="https://rawgit.com/ismarslomic/angular-read-more/master/dist/readmore.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-sanitize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-touch.min.js"></script>
-  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script> -->
   <!-- Slick JS -->
   <!-- script -->
   <script src="https://code.angularjs.org/1.4.8/angular.js"></script>
@@ -92,24 +90,28 @@
   <div ui-view>
 
   </div>
-  <div class="cart-icon" ng-click="cartStyle={'width': '250px'}"><i class="fas fa-shopping-cart"></i></div>
+  <div class="cart-icon"><i class="fas fa-shopping-cart"></i></div>
   <!-- Cart Show -->
-  <div id="cart" class="viewcart" ng-show="cart.length !== 0" ng-style="cartStyle">
+  <div id="cart" class="viewcart">
     <div class="cart-head">
       <h3>CART-SHOW</h3>
-      <a class="closebtn" ng-click="cartStyle={'width': '0'}">&times;</a>
+      <a class="closebtn">&times;</a>
     </div>
     <div class="cart-body">
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="c in carts">
-          <h4>{{c.name}} | <span style="color:blue"> {{c.count}} </span>
-            | {{c.price*c.count | currency}}</h4>
-          <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove" />
+        <li class="list-group-item row" ng-repeat="c in carts()">
+          <img src="{{c.imgMain}}" class="col-7" alt="">
+          <div class="blockInfo col-5">
+            <small>{{c.name}}</small>
+            <div> quantity : {{c.qty}} </div>
+            <div> total : {{c.total | currency}}</div>
+            <input class="btn btn-danger" type="button" ng-click="delete($index)" value="Remove" />
+          </div>
         </li>
       </ul>
-      <h3>Total : {{totals | currency}}</h3>
+
     </div>
-    <div class="cart-foot"><a ui-sref='cart'>view cart</a></div>
+    <div class="cart-foot"><h3>Totals : {{totals | currency}}</h3><a ui-sref='cart'>view cart</a></div>
   </div>
   <!-- End of CartShow -->
   <div class="contact">

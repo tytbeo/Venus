@@ -50,10 +50,10 @@
         <input ng-change="qtyFunc(quantity)" ng-model="quantity" class="form-control quantity" value="1" type="number" pattern="[0-9]*" inputmode="numeric" min="1" />
       </div>
       <div class="price">
-        <h1 id="result">{{ product.price | currency }}</h1>
+        <h1 id="result">{{ totals = product.price * quantity | currency }}</h1>
 
       </div>
-      <button type="submit" ng-click="addItemToCart(product)" class="btn btn-dark btn-block addcart">Add to cart</button>
+      <button type="submit" ng-click="addItemToCart(product,quantity)" class="btn btn-dark btn-block addcart">Add to cart</button>
     </div>
     <!-- End of Product Buy -->
 
