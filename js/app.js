@@ -82,6 +82,8 @@ app.controller('mainCtrl',['$scope','$rootScope', function($scope,$rootScope){
     {class:'Tables-wares',name:'Retro Serving Tray',img:'images/Tables wares/Retro Serving Tray.jpg'},
   ]
   $rootScope.productList = product;
+   $scope.carts = $rootScope.bigCart ;
+   $scope.totals = $rootScope.bigTotal ;
 }]);
 app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
   $(document).ready(function() {
@@ -347,9 +349,14 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
   $scope.products = product;
   // function to show price * quantity
   $scope.qtyFunc = function(vals) {
-    var basePrice = product.price;
-
+    for (var i = 0; i < product.length; i++) {
+      if ($scope.productId == product[i].id){
+        var basePrice = product[i].price;
+        console.log(basePrice);
+      }
+    }
     console.log(vals);
+
     $('#result').html('$' + (vals * basePrice).toFixed(2));
   };
   // end of function to show price * quantity
@@ -364,7 +371,8 @@ app.controller('detailsCtrl',['$scope', '$stateParams','$cookies','$rootScope',f
   // view cart
   $scope.cart = [];
   $scope.total = 0;
-
+  $rootScope.bigCart = $scope.cart;
+  $rootScope.bigTotal = $scope.total;
   if (!angular.isUndefined($cookies.get('total'))) {
     $scope.total = parseFloat($cookies.get('total'));
   }
