@@ -38,6 +38,10 @@ body {
   padding: 6px!important;
   max-height: 170px;
 }
+.list-group-item img {
+  width : auto;
+  height :auto;
+}
 .list-group-item img, .blockInfo {
   padding: 4px!important;
 }
