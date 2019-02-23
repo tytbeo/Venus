@@ -113,12 +113,11 @@ a.findMore {
   float: left;
   display: inline-block;
   width: 40%;
-  max-width: 380px;
+  max-width: 350px;
 }
 .image-about img{
   width: 100%;
   height: auto;
-  max-height: 380px;
 }
 .details{
   float: right;
@@ -167,7 +166,7 @@ a.findMore {
 .gallery-at-home img{
   width: 100%;
   height: auto;
-  max-width: 380px;
+  max-width: 350px;
   margin: auto;
 }
 .owl-theme .owl-nav {
