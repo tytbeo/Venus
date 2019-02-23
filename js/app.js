@@ -160,9 +160,6 @@ app.controller('homeCtrl',['$scope','$rootScope', function($scope,$rootScope){
         1023: {
           items: 4
         },
-        1300: {
-          items: 5
-        }
       }
     });
   });
