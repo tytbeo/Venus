@@ -73,7 +73,7 @@ body {
   top : 0;
 }
 .cart-body {
-  height: 80%;
+  height: 75%;
   position: absolute;
   top : 10%;
   overflow-x: hidden;
@@ -81,10 +81,10 @@ body {
   width: 100%;
 }
 .cart-foot {
-  height: 10%;
+  height: 15%;
   width: 100%;
   position: absolute;
-  top :90%;
+  top: 85%;
   font-size: 2rem;
   padding-left: 30px;
   background-color: #363636;
