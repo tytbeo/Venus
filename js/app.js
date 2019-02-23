@@ -33,6 +33,11 @@ app.config(function($stateProvider,$urlRouterProvider) {
     templateUrl : "html/cart.html",
     controller : "cartCtrl"
   })
+  .state("faq", {
+    url: '/faq',
+    templateUrl : "html/faq.html",
+    controller : "faqCtrl"
+  })
   .state('details', {
         url: "/details/:ProductId",
         templateUrl : 'html/details.html',
