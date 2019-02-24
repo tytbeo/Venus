@@ -1,8 +1,10 @@
 .page-heading{
 
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 .page-heading h1{
+  text-align: center;
+
   padding-top: 35px;
   padding-bottom: 35px;
   text-align: center;
@@ -11,6 +13,9 @@
   position: relative;
   border-top: 0 !important;
 }
+h1{
+  font-size: 40px;
+}
 
 .container{
   margin-right: auto;
@@ -18,13 +23,19 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-.container h5{
-  font-weight: bold;
+ .container h5{
+  color: black;
+font-size: 20px;
 }
-p{
+.container p{
+  padding-bottom: 19px;
   font-size: 16px;
+  padding-left: 7px;
+  text-indent: 30px;
+
 }
-.faq p {
-  margin-left: 15px;
-  text-indent: 5px;
+.container h4{
+  padding: 10px;
+  font-size: 20px;
+  line-height: 8;
 }
