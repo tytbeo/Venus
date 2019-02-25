@@ -39,3 +39,11 @@ font-size: 20px;
   font-size: 20px;
   line-height: 8;
 }
+
+#sitemap > ul> li > a {
+  color: inherit;
+}
+
+#sitemap > ul> li > a:hover {
+  color: #C4C4C4;
+}
