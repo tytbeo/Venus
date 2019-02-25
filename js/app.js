@@ -38,6 +38,11 @@ app.config(function($stateProvider,$urlRouterProvider) {
     templateUrl : "html/faq.html",
     controller : "faqCtrl"
   })
+  .state("sitemap", {
+    url: '/sitemap',
+    templateUrl : "html/sitemap.html",
+    controller : "sitemapCtrl"
+  })
   .state('details', {
         url: "/details/:ProductId",
         templateUrl : 'html/details.html',
