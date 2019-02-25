@@ -128,7 +128,7 @@ span.decorative-icon-right {
 .side {
 }
 /* categories */
-ul {
+ul.categories {
   list-style-type: none;
   padding: 0;
 }
